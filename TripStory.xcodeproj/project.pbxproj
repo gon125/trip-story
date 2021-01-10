@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3247D3C25A9FE340002A7EA /* EnvironmentOverrides in Frameworks */ = {isa = PBXBuildFile; productRef = B3247D3B25A9FE340002A7EA /* EnvironmentOverrides */; };
+		B3247D4025A9FEA70002A7EA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3247D3F25A9FEA70002A7EA /* Launch Screen.storyboard */; };
+		B3247D4425AA00290002A7EA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B3247D4325AA00290002A7EA /* logo.png */; };
+		B3247D4C25AA08750002A7EA /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D4B25AA08750002A7EA /* ErrorView.swift */; };
+		B3247D5025AA0C130002A7EA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D4F25AA0C130002A7EA /* MainView.swift */; };
+		B3247D5425AA17070002A7EA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D5325AA17070002A7EA /* StartView.swift */; };
+		B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D5725AA1EDF0002A7EA /* CancelBag.swift */; };
+		B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */; };
+		B3247D7425AA3A9C0002A7EA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D7325AA3A9C0002A7EA /* Color.swift */; };
+		B3247D7A25AA3B1E0002A7EA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3247D7925AA3B1E0002A7EA /* Colors.xcassets */; };
 		B3CE27A025A8AED300C5E0A9 /* TripStoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */; };
 		B3CE27A225A8AED300C5E0A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE27A125A8AED300C5E0A9 /* ContentView.swift */; };
 		B3CE27A425A8AED600C5E0A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CE27A325A8AED600C5E0A9 /* Assets.xcassets */; };
@@ -17,7 +27,6 @@
 		B3CE281B25A9A89500C5E0A9 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE281A25A9A89500C5E0A9 /* UnitTests.swift */; };
 		B3CE282625A9A8C100C5E0A9 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = B3CE282525A9A8C100C5E0A9 /* ViewInspector */; };
 		B3CE283025A9A9FB00C5E0A9 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE282F25A9A9FB00C5E0A9 /* ContentViewTests.swift */; };
-		B3CE283725A9AAF300C5E0A9 /* EnvironmentOverrides in Frameworks */ = {isa = PBXBuildFile; productRef = B3CE283625A9AAF300C5E0A9 /* EnvironmentOverrides */; };
 		B3CE283E25A9BE5700C5E0A9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE283D25A9BE5700C5E0A9 /* Store.swift */; };
 		B3CE284225A9C86800C5E0A9 /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284125A9C86800C5E0A9 /* InteractorsContainer.swift */; };
 		B3CE284925A9CB8600C5E0A9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284825A9CB8600C5E0A9 /* AppEnvironment.swift */; };
@@ -36,6 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B3247D3F25A9FEA70002A7EA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B3247D4325AA00290002A7EA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		B3247D4B25AA08750002A7EA /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		B3247D4F25AA0C130002A7EA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B3247D5325AA17070002A7EA /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		B3247D5725AA1EDF0002A7EA /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModifier.swift; sourceTree = "<group>"; };
+		B3247D7325AA3A9C0002A7EA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B3247D7925AA3B1E0002A7EA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B3CE279C25A8AED300C5E0A9 /* TripStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStoryApp.swift; sourceTree = "<group>"; };
 		B3CE27A125A8AED300C5E0A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3CE283725A9AAF300C5E0A9 /* EnvironmentOverrides in Frameworks */,
+				B3247D3C25A9FE340002A7EA /* EnvironmentOverrides in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +95,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3247D3A25A9FE340002A7EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3247D4A25AA084F0002A7EA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B3247D4B25AA08750002A7EA /* ErrorView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B3247D7225AA3A870002A7EA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B3247D7325AA3A9C0002A7EA /* Color.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		B3CE279325A8AED300C5E0A9 = {
 			isa = PBXGroup;
 			children = (
 				B3CE279E25A8AED300C5E0A9 /* TripStory */,
 				B3CE281925A9A89500C5E0A9 /* UnitTests */,
 				B3CE279D25A8AED300C5E0A9 /* Products */,
+				B3247D3A25A9FE340002A7EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,7 +177,12 @@
 		B3CE27CF25A8AEF400C5E0A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B3247D7225AA3A870002A7EA /* Constants */,
+				B3247D4A25AA084F0002A7EA /* Components */,
 				B3CE27A125A8AED300C5E0A9 /* ContentView.swift */,
+				B3247D4F25AA0C130002A7EA /* MainView.swift */,
+				B3247D5325AA17070002A7EA /* StartView.swift */,
+				B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -152,10 +199,13 @@
 		B3CE27D125A8AF0A00C5E0A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B3247D4325AA00290002A7EA /* logo.png */,
 				B3CE27A525A8AED600C5E0A9 /* Preview Content */,
 				B3CE27A825A8AED600C5E0A9 /* Info.plist */,
 				B3CE27A325A8AED600C5E0A9 /* Assets.xcassets */,
 				B3CE27F125A8B99A00C5E0A9 /* Localizable.strings */,
+				B3247D3F25A9FEA70002A7EA /* Launch Screen.storyboard */,
+				B3247D7925AA3B1E0002A7EA /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -201,6 +251,7 @@
 			children = (
 				B3CE283D25A9BE5700C5E0A9 /* Store.swift */,
 				B3CE285025A9D85100C5E0A9 /* Helpers.swift */,
+				B3247D5725AA1EDF0002A7EA /* CancelBag.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -230,7 +281,7 @@
 			);
 			name = TripStory;
 			packageProductDependencies = (
-				B3CE283625A9AAF300C5E0A9 /* EnvironmentOverrides */,
+				B3247D3B25A9FE340002A7EA /* EnvironmentOverrides */,
 			);
 			productName = TripStory;
 			productReference = B3CE279C25A8AED300C5E0A9 /* TripStory.app */;
@@ -306,7 +357,10 @@
 			files = (
 				B3CE27A725A8AED600C5E0A9 /* Preview Assets.xcassets in Resources */,
 				B3CE27EF25A8B99A00C5E0A9 /* Localizable.strings in Resources */,
+				B3247D4025A9FEA70002A7EA /* Launch Screen.storyboard in Resources */,
+				B3247D7A25AA3B1E0002A7EA /* Colors.xcassets in Resources */,
 				B3CE27A425A8AED600C5E0A9 /* Assets.xcassets in Resources */,
+				B3247D4425AA00290002A7EA /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,9 +381,15 @@
 				B3CE284925A9CB8600C5E0A9 /* AppEnvironment.swift in Sources */,
 				B3CE283E25A9BE5700C5E0A9 /* Store.swift in Sources */,
 				B3CE284225A9C86800C5E0A9 /* InteractorsContainer.swift in Sources */,
+				B3247D5425AA17070002A7EA /* StartView.swift in Sources */,
 				B3CE27FE25A9474F00C5E0A9 /* DependencyInjector.swift in Sources */,
 				B3CE285125A9D85100C5E0A9 /* Helpers.swift in Sources */,
+				B3247D4C25AA08750002A7EA /* ErrorView.swift in Sources */,
+				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
+				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationInteractor.swift in Sources */,
+				B3247D7425AA3A9C0002A7EA /* Color.swift in Sources */,
+				B3247D5025AA0C130002A7EA /* MainView.swift in Sources */,
 				B3CE27F925A946EC00C5E0A9 /* AppState.swift in Sources */,
 				B3CE27A225A8AED300C5E0A9 /* ContentView.swift in Sources */,
 				B3CE27A025A8AED300C5E0A9 /* TripStoryApp.swift in Sources */,
@@ -622,15 +682,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B3247D3B25A9FE340002A7EA /* EnvironmentOverrides */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3CE283525A9AAF300C5E0A9 /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */;
+			productName = EnvironmentOverrides;
+		};
 		B3CE282525A9A8C100C5E0A9 /* ViewInspector */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B3CE282425A9A8C100C5E0A9 /* XCRemoteSwiftPackageReference "ViewInspector" */;
 			productName = ViewInspector;
-		};
-		B3CE283625A9AAF300C5E0A9 /* EnvironmentOverrides */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B3CE283525A9AAF300C5E0A9 /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */;
-			productName = EnvironmentOverrides;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
