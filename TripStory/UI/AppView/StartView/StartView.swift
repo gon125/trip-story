@@ -21,7 +21,7 @@ struct StartView: View {
                         .font(.system(size: 16))
                     Spacer()
                     NavigationLink(
-                        destination: Text("login")) {
+                        destination: LoginView()) {
                         Text("Log In")
                             .font(.system(size: 20))
                             .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 47)
@@ -31,7 +31,7 @@ struct StartView: View {
                     }
                     Spacer().frame(minHeight: 12, maxHeight: 18)
                     NavigationLink(
-                        destination: Text("sign up")) {
+                        destination: SignUpView()) {
                         Text("Sign Up")
                             .font(.system(size: 20))
                             .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 47)
@@ -53,6 +53,9 @@ struct StartView: View {
                 .padding(.horizontal, 20)
             }
         }
+        // for navigation bar back button color
+        .accentColor(.white)
+        //.navigationBarBackButtonHidden(true)
     }
 }
 

@@ -26,9 +26,19 @@ struct ContentView: View {
             } else {
                 ZStack {
                     self.content
+                        .attachEnvironmentOverrides()
+                        .onReceive(loginStateUpdate) { self.loginState = $0 }
                     //self.popup
                 }
                 
+            }
+        }
+    }
+    
+    var onChangeHandler: (EnvironmentValues.Diff) -> Void {
+        return { diff in
+            if !diff.isDisjoint(with: [.locale, .sizeCategory]) {
+                self.injected.appState[\.routing] = AppState.ViewRouting()
             }
         }
     }
@@ -51,22 +61,14 @@ struct ContentView: View {
 }
 
 private extension ContentView {
+    
+    var loginStateUpdate: AnyPublisher<AppState.LoginState, Never> {
+        injected.appState.updates(for: \.loginState)
+    }
+    
 //    var notRequesetedView: some View {
 //        Login
 //    }
-}
-
-extension ContentView {
-    class ViewModel: ObservableObject {
-        @Published var loginState: AppState.LoginState = .notRequested
-        let container: DIContainer
-        
-        init(container: DIContainer) {
-            self.container = container
-            container.appState.map(\.loginState).assign(to: \.loginState, on: self).store(in: CancelBag())
-            
-        }
-    }
 }
 
 #if DEBUG
