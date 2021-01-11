@@ -29,6 +29,13 @@ struct DIContainer: EnvironmentKey {
     
 }
 
+extension EnvironmentValues {
+    var injected: DIContainer {
+        get { self[DIContainer.self] }
+        set { self[DIContainer.self] = newValue }
+    }
+}
+
 #if DEBUG
 extension DIContainer {
     static var preview: Self {
@@ -36,3 +43,19 @@ extension DIContainer {
     }
 }
 #endif
+
+// MARK: - Injection in the view hierarchy
+
+extension View {
+    
+    func inject(_ appState: AppState, _ interactors: DIContainer.Interactors) -> some View {
+        let container = DIContainer(appState: .init(appState), interactors: interactors)
+        return inject(container)
+    }
+    
+    func inject(_ container: DIContainer) -> some View {
+        return self
+            //.modifier(RootView)
+        
+    }
+}

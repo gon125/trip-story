@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Combine
+import EnvironmentOverrides
 
 @main
 struct TripStoryApp: App {
@@ -14,7 +16,7 @@ struct TripStoryApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(container: environment.container)
+            ContentView().inject(environment.container)
         }
     }
     
