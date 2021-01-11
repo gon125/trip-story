@@ -9,7 +9,7 @@ import Combine
 
 struct AppEnvironment {
     let container: DIContainer
-    //let systemEventsHandler: SystemEventsHandler
+    let systemEventsHandler: SystemEventsHandler
 }
 
 extension AppEnvironment {
@@ -19,7 +19,8 @@ extension AppEnvironment {
         
         
         let diContainer = DIContainer(appState: appState, interactors: interactors)
-        return AppEnvironment(container: diContainer)
+        let systemEventHandler = DefaultSystemEventHandler(container: diContainer)
+        return AppEnvironment(container: diContainer, systemEventsHandler: systemEventHandler)
     }
     
     private static func configuredInteractors(appState: Store<AppState>) -> DIContainer.Interactors {
