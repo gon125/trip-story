@@ -11,12 +11,11 @@ import EnvironmentOverrides
 
 struct ContentView: View {
     
-    private let container: DIContainer
-    //private let
+    @Environment(\.injected) private var injected: DIContainer
     private let isRunningTests: Bool
+    @State private(set) var loginState: AppState.LoginState = .notRequested
 
-    init(container: DIContainer, isRunningTests: Bool = ProcessInfo.processInfo.isRunningTests) {
-        self.container = container
+    init(isRunningTests: Bool = ProcessInfo.processInfo.isRunningTests) {
         self.isRunningTests = isRunningTests
     }
     
@@ -25,8 +24,47 @@ struct ContentView: View {
             if isRunningTests {
                 Text("Running unit tests")
             } else {
+                ZStack {
+                    self.content
+                    //self.popup
+                }
                 
             }
+        }
+    }
+    
+    private var content: AnyView {
+        switch loginState {
+        case .sucess: return AnyView(MainView())
+        default: return AnyView(StartView())
+        }
+    }
+    
+//    private var popup: AnyView {
+//        switch viewModel.loginState {
+//        case let .failed(error):
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
+//    }
+}
+
+private extension ContentView {
+//    var notRequesetedView: some View {
+//        Login
+//    }
+}
+
+extension ContentView {
+    class ViewModel: ObservableObject {
+        @Published var loginState: AppState.LoginState = .notRequested
+        let container: DIContainer
+        
+        init(container: DIContainer) {
+            self.container = container
+            container.appState.map(\.loginState).assign(to: \.loginState, on: self).store(in: CancelBag())
+            
         }
     }
 }
@@ -34,7 +72,7 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(container: .preview)
+        ContentView().inject(.preview)
     }
 }
 #endif
