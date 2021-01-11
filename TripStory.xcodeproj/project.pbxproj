@@ -15,11 +15,19 @@
 		B3247D5425AA17070002A7EA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D5325AA17070002A7EA /* StartView.swift */; };
 		B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D5725AA1EDF0002A7EA /* CancelBag.swift */; };
 		B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */; };
-		B3247D7425AA3A9C0002A7EA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D7325AA3A9C0002A7EA /* Color.swift */; };
+		B3247D7425AA3A9C0002A7EA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D7325AA3A9C0002A7EA /* Colors.swift */; };
 		B3247D7A25AA3B1E0002A7EA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3247D7925AA3B1E0002A7EA /* Colors.xcassets */; };
 		B3283FDE25ABF9FD00392CCA /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FDD25ABF9FD00392CCA /* SystemEventsHandler.swift */; };
 		B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FE325AC13F100392CCA /* DeepLinksHandler.swift */; };
 		B3283FE825AC2DD100392CCA /* PushNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FE725AC2DD100392CCA /* PushNotificationsHandler.swift */; };
+		B3283FEC25AC388600392CCA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FEB25AC388600392CCA /* LoginView.swift */; };
+		B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FF525AC394E00392CCA /* SignUpView.swift */; };
+		B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20225AC4F830095C52F /* NavigationBarModifier.swift */; };
+		B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20925AC7C2B0095C52F /* Fonts.swift */; };
+		B365C22D25AC8B170095C52F /* NanumSquareExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */; };
+		B365C22E25AC8B170095C52F /* NanumSquareBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22A25AC8B160095C52F /* NanumSquareBold.ttf */; };
+		B365C22F25AC8B170095C52F /* NanumSquareLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22B25AC8B170095C52F /* NanumSquareLight.ttf */; };
+		B365C23025AC8B170095C52F /* NanumSquareRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */; };
 		B3CE27A025A8AED300C5E0A9 /* TripStoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */; };
 		B3CE27A225A8AED300C5E0A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE27A125A8AED300C5E0A9 /* ContentView.swift */; };
 		B3CE27A425A8AED600C5E0A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CE27A325A8AED600C5E0A9 /* Assets.xcassets */; };
@@ -55,11 +63,19 @@
 		B3247D5325AA17070002A7EA /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		B3247D5725AA1EDF0002A7EA /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModifier.swift; sourceTree = "<group>"; };
-		B3247D7325AA3A9C0002A7EA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B3247D7325AA3A9C0002A7EA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B3247D7925AA3B1E0002A7EA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B3283FDD25ABF9FD00392CCA /* SystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEventsHandler.swift; sourceTree = "<group>"; };
 		B3283FE325AC13F100392CCA /* DeepLinksHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinksHandler.swift; sourceTree = "<group>"; };
 		B3283FE725AC2DD100392CCA /* PushNotificationsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsHandler.swift; sourceTree = "<group>"; };
+		B3283FEB25AC388600392CCA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B3283FF525AC394E00392CCA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B365C20225AC4F830095C52F /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		B365C20925AC7C2B0095C52F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareExtraBold.ttf; sourceTree = "<group>"; };
+		B365C22A25AC8B160095C52F /* NanumSquareBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareBold.ttf; sourceTree = "<group>"; };
+		B365C22B25AC8B170095C52F /* NanumSquareLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareLight.ttf; sourceTree = "<group>"; };
+		B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRegular.ttf; sourceTree = "<group>"; };
 		B3CE279C25A8AED300C5E0A9 /* TripStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStoryApp.swift; sourceTree = "<group>"; };
 		B3CE27A125A8AED300C5E0A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,9 +135,74 @@
 		B3247D7225AA3A870002A7EA /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				B3247D7325AA3A9C0002A7EA /* Color.swift */,
+				B3247D7325AA3A9C0002A7EA /* Colors.swift */,
+				B365C20925AC7C2B0095C52F /* Fonts.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		B3283FEF25AC38C100392CCA /* AppView */ = {
+			isa = PBXGroup;
+			children = (
+				B3CE27A125A8AED300C5E0A9 /* ContentView.swift */,
+				B3283FF125AC38E100392CCA /* MainView */,
+				B3283FF025AC38D200392CCA /* StartView */,
+				B3247D4F25AA0C130002A7EA /* MainView.swift */,
+			);
+			path = AppView;
+			sourceTree = "<group>";
+		};
+		B3283FF025AC38D200392CCA /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				B3247D5325AA17070002A7EA /* StartView.swift */,
+				B3283FF225AC38F200392CCA /* LoginView */,
+				B3283FF325AC392100392CCA /* SignUpView */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		B3283FF125AC38E100392CCA /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		B3283FF225AC38F200392CCA /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				B3283FEB25AC388600392CCA /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		B3283FF325AC392100392CCA /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				B3283FF525AC394E00392CCA /* SignUpView.swift */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		B365C20125AC4F5E0095C52F /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */,
+				B365C20225AC4F830095C52F /* NavigationBarModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		B365C21325AC888E0095C52F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B365C22A25AC8B160095C52F /* NanumSquareBold.ttf */,
+				B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */,
+				B365C22B25AC8B170095C52F /* NanumSquareLight.ttf */,
+				B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		B3CE279325A8AED300C5E0A9 = {
@@ -183,12 +264,10 @@
 		B3CE27CF25A8AEF400C5E0A9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B365C20125AC4F5E0095C52F /* ViewModifiers */,
+				B3283FEF25AC38C100392CCA /* AppView */,
 				B3247D7225AA3A870002A7EA /* Constants */,
 				B3247D4A25AA084F0002A7EA /* Components */,
-				B3CE27A125A8AED300C5E0A9 /* ContentView.swift */,
-				B3247D4F25AA0C130002A7EA /* MainView.swift */,
-				B3247D5325AA17070002A7EA /* StartView.swift */,
-				B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -208,6 +287,7 @@
 		B3CE27D125A8AF0A00C5E0A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B365C21325AC888E0095C52F /* Fonts */,
 				B3247D4325AA00290002A7EA /* logo.png */,
 				B3CE27A525A8AED600C5E0A9 /* Preview Content */,
 				B3CE27A825A8AED600C5E0A9 /* Info.plist */,
@@ -364,9 +444,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B365C23025AC8B170095C52F /* NanumSquareRegular.ttf in Resources */,
+				B365C22F25AC8B170095C52F /* NanumSquareLight.ttf in Resources */,
+				B365C22E25AC8B170095C52F /* NanumSquareBold.ttf in Resources */,
 				B3CE27A725A8AED600C5E0A9 /* Preview Assets.xcassets in Resources */,
 				B3CE27EF25A8B99A00C5E0A9 /* Localizable.strings in Resources */,
 				B3247D4025A9FEA70002A7EA /* Launch Screen.storyboard in Resources */,
+				B365C22D25AC8B170095C52F /* NanumSquareExtraBold.ttf in Resources */,
 				B3247D7A25AA3B1E0002A7EA /* Colors.xcassets in Resources */,
 				B3CE27A425A8AED600C5E0A9 /* Assets.xcassets in Resources */,
 				B3247D4425AA00290002A7EA /* logo.png in Resources */,
@@ -395,14 +479,18 @@
 				B3CE27FE25A9474F00C5E0A9 /* DependencyInjector.swift in Sources */,
 				B3CE285125A9D85100C5E0A9 /* Helpers.swift in Sources */,
 				B3247D4C25AA08750002A7EA /* ErrorView.swift in Sources */,
+				B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */,
+				B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */,
 				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
 				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
 				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationInteractor.swift in Sources */,
-				B3247D7425AA3A9C0002A7EA /* Color.swift in Sources */,
+				B3247D7425AA3A9C0002A7EA /* Colors.swift in Sources */,
 				B3247D5025AA0C130002A7EA /* MainView.swift in Sources */,
 				B3283FDE25ABF9FD00392CCA /* SystemEventsHandler.swift in Sources */,
 				B3CE27F925A946EC00C5E0A9 /* AppState.swift in Sources */,
+				B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */,
+				B3283FEC25AC388600392CCA /* LoginView.swift in Sources */,
 				B3CE27A225A8AED300C5E0A9 /* ContentView.swift in Sources */,
 				B3CE27A025A8AED300C5E0A9 /* TripStoryApp.swift in Sources */,
 			);
