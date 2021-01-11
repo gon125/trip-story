@@ -17,6 +17,9 @@
 		B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */; };
 		B3247D7425AA3A9C0002A7EA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D7325AA3A9C0002A7EA /* Color.swift */; };
 		B3247D7A25AA3B1E0002A7EA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3247D7925AA3B1E0002A7EA /* Colors.xcassets */; };
+		B3283FDE25ABF9FD00392CCA /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FDD25ABF9FD00392CCA /* SystemEventsHandler.swift */; };
+		B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FE325AC13F100392CCA /* DeepLinksHandler.swift */; };
+		B3283FE825AC2DD100392CCA /* PushNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FE725AC2DD100392CCA /* PushNotificationsHandler.swift */; };
 		B3CE27A025A8AED300C5E0A9 /* TripStoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */; };
 		B3CE27A225A8AED300C5E0A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE27A125A8AED300C5E0A9 /* ContentView.swift */; };
 		B3CE27A425A8AED600C5E0A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CE27A325A8AED600C5E0A9 /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 		B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModifier.swift; sourceTree = "<group>"; };
 		B3247D7325AA3A9C0002A7EA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B3247D7925AA3B1E0002A7EA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B3283FDD25ABF9FD00392CCA /* SystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEventsHandler.swift; sourceTree = "<group>"; };
+		B3283FE325AC13F100392CCA /* DeepLinksHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinksHandler.swift; sourceTree = "<group>"; };
+		B3283FE725AC2DD100392CCA /* PushNotificationsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsHandler.swift; sourceTree = "<group>"; };
 		B3CE279C25A8AED300C5E0A9 /* TripStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStoryApp.swift; sourceTree = "<group>"; };
 		B3CE27A125A8AED300C5E0A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +198,9 @@
 			children = (
 				B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */,
 				B3CE284825A9CB8600C5E0A9 /* AppEnvironment.swift */,
+				B3283FDD25ABF9FD00392CCA /* SystemEventsHandler.swift */,
+				B3283FE325AC13F100392CCA /* DeepLinksHandler.swift */,
+				B3283FE725AC2DD100392CCA /* PushNotificationsHandler.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -379,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3CE284925A9CB8600C5E0A9 /* AppEnvironment.swift in Sources */,
+				B3283FE825AC2DD100392CCA /* PushNotificationsHandler.swift in Sources */,
 				B3CE283E25A9BE5700C5E0A9 /* Store.swift in Sources */,
 				B3CE284225A9C86800C5E0A9 /* InteractorsContainer.swift in Sources */,
 				B3247D5425AA17070002A7EA /* StartView.swift in Sources */,
@@ -387,9 +397,11 @@
 				B3247D4C25AA08750002A7EA /* ErrorView.swift in Sources */,
 				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
 				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
+				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationInteractor.swift in Sources */,
 				B3247D7425AA3A9C0002A7EA /* Color.swift in Sources */,
 				B3247D5025AA0C130002A7EA /* MainView.swift in Sources */,
+				B3283FDE25ABF9FD00392CCA /* SystemEventsHandler.swift in Sources */,
 				B3CE27F925A946EC00C5E0A9 /* AppState.swift in Sources */,
 				B3CE27A225A8AED300C5E0A9 /* ContentView.swift in Sources */,
 				B3CE27A025A8AED300C5E0A9 /* TripStoryApp.swift in Sources */,
@@ -432,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -494,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
