@@ -17,6 +17,10 @@ extension UINavigationController {
             .foregroundColor: UIColor.white,
             .font: UIFont.navigationBarTitle
         ]
+        // remove back button text
+        standardAppearance.backButtonAppearance.normal.titleTextAttributes = [
+            .foregroundColor: UIColor.clear
+        ]
         standardAppearance.configureWithTransparentBackground()
         
         navigationBar.standardAppearance = standardAppearance
