@@ -15,15 +15,15 @@ struct StartView: View {
                 
                 VStack {
                     Text("Trip Story")
-                        .font(.system(size: 85))
+                        .font(.title)
                         .multilineTextAlignment(.center)
                     Text("You deserve a good trip!")
-                        .font(.system(size: 16))
+                        .font(.subtitle)
                     Spacer()
                     NavigationLink(
                         destination: LoginView()) {
                         Text("Log In")
-                            .font(.system(size: 20))
+                            .font(.buttonText)
                             .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 47)
                             .background(Color.white)
                             .cornerRadius(10)
@@ -33,7 +33,7 @@ struct StartView: View {
                     NavigationLink(
                         destination: SignUpView()) {
                         Text("Sign Up")
-                            .font(.system(size: 20))
+                            .font(.buttonText)
                             .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 47)
                             .background(Color.white)
                             .cornerRadius(10)
@@ -44,7 +44,7 @@ struct StartView: View {
                         Image(systemName: "exclamationmark.circle.fill")
                         Text("Trip Story provides travel stories shared by members.")
                             .multilineTextAlignment(.center)
-                            .font(.system(size: 16))
+                            .font(.subtitle)
                     }
                     Spacer()
                     
