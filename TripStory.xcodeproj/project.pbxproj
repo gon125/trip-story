@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC4F25AE8907007D99AD /* FindPasswordView.swift */; };
 		B3247D3C25A9FE340002A7EA /* EnvironmentOverrides in Frameworks */ = {isa = PBXBuildFile; productRef = B3247D3B25A9FE340002A7EA /* EnvironmentOverrides */; };
 		B3247D4025A9FEA70002A7EA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3247D3F25A9FEA70002A7EA /* Launch Screen.storyboard */; };
 		B3247D4425AA00290002A7EA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B3247D4325AA00290002A7EA /* logo.png */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B306CC4F25AE8907007D99AD /* FindPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordView.swift; sourceTree = "<group>"; };
 		B3247D3F25A9FEA70002A7EA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B3247D4325AA00290002A7EA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		B3247D4B25AA08750002A7EA /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B306CC4D25AE88C7007D99AD /* FindPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				B306CC4F25AE8907007D99AD /* FindPasswordView.swift */,
+			);
+			path = FindPasswordView;
+			sourceTree = "<group>";
+		};
 		B3247D3A25A9FE340002A7EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +191,7 @@
 		B3283FF225AC38F200392CCA /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				B306CC4D25AE88C7007D99AD /* FindPasswordView */,
 				B3283FEB25AC388600392CCA /* LoginView.swift */,
 			);
 			path = LoginView;
@@ -503,6 +514,7 @@
 				B37DAC2F25AD5C2E007855E6 /* StyleGuides.swift in Sources */,
 				B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */,
 				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
+				B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */,
 				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
 				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
 				B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */,
