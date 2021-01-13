@@ -5,8 +5,6 @@
 //  Created by Gon on 2021/01/09.
 //
 
-import SwiftUI
-
 struct AppState: Equatable {
     var userData = UserData()
     var routing = ViewRouting()
@@ -28,7 +26,7 @@ extension AppState {
 extension AppState {
     struct System: Equatable {
         var isActive: Bool = false
-        var keyboardHeight: CGFloat = 0
+        var keyboardHeight: Double = 0
     }
 }
 

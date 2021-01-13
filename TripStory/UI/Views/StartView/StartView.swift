@@ -23,21 +23,13 @@ struct StartView: View {
                     NavigationLink(
                         destination: LoginView()) {
                         Text("Log In")
-                            .font(.buttonText)
-                            .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 47)
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .foregroundColor(.major)
+                            .modifier(ButtonModifier())
                     }
                     Spacer().frame(minHeight: 12, maxHeight: 18)
                     NavigationLink(
                         destination: SignUpView()) {
                         Text("Sign Up")
-                            .font(.buttonText)
-                            .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 47)
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .foregroundColor(.major)
+                            .modifier(ButtonModifier())
                     }
                     Spacer().frame(height: 24)
                     HStack(alignment: .top) {
@@ -50,7 +42,7 @@ struct StartView: View {
                     
                 }
                 .foregroundColor(.white)
-                .padding(.horizontal, 20)
+                .padding(.horizontal, .horizontalPadding)
             }
         }
         // for navigation bar back button color

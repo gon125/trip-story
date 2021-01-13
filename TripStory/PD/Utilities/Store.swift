@@ -5,7 +5,6 @@
 //  Created by Gon on 2021/01/09.
 //
 
-import SwiftUI
 import Combine
 
 typealias Store<State> = CurrentValueSubject<State, Never>

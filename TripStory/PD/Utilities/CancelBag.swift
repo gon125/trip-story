@@ -7,7 +7,7 @@
 
 import Combine
 
-final class CancelBag {
+public final class CancelBag {
     fileprivate(set) var subsriptions = Set<AnyCancellable>()
     
     func cancel() {

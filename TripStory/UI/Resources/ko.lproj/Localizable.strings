@@ -1,6 +1,15 @@
 
 
+"Forgot password?" = "비밀번호 찾기";
+
+
 "Log In" = "로그인";
+
+
+"Password" = "비밀번호";
+
+/* 로그인 화면 확인버튼 */
+"Sign In" = "확인";
 
 
 "Sign Up" = "회원가입";
@@ -10,6 +19,9 @@
 
 /* 본 서비스는 여행기의 내용을 회원끼리 공유하는 서비스 입니다. */
 "Trip Story provides travel stories shared by members." = "본 서비스는 여행기의 내용을 회원끼리 공유하는 서비스 입니다.";
+
+
+"UserID" = "아이디";
 
 
 "You deserve a good trip!" = "열심히 일 한 당신 떠나요!";

@@ -8,6 +8,7 @@
 import Foundation
 
 protocol AuthenticationInteractor {
+    //func login(username: String, password: String)
     
 }
 
