@@ -26,7 +26,8 @@ struct LoginView: View {
                     .modifier(TextFiledModifier())
                 Spacer().frame(height: 20)
                 HStack { Spacer()
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    NavigationLink(
+                        destination: FindPasswordView(id: $id)) {
                         Text("Forgot password?")
                             .modifier(TextButtonModifier())
                     }
