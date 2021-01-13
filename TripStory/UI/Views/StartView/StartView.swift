@@ -47,7 +47,7 @@ struct StartView: View {
         }
         // for navigation bar back button color
         .accentColor(.white)
-        //.navigationBarBackButtonHidden(true)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
