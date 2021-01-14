@@ -16,16 +16,15 @@ extension AppEnvironment {
     static func bootstrap() -> AppEnvironment {
         let appState = Store(AppState())
         let interactors = configuredInteractors(appState: appState)
-        
-        
+
         let diContainer = DIContainer(appState: appState, interactors: interactors)
         let systemEventHandler = DefaultSystemEventHandler(container: diContainer)
         return AppEnvironment(container: diContainer, systemEventsHandler: systemEventHandler)
     }
-    
+
     private static func configuredInteractors(appState: Store<AppState>) -> DIContainer.Interactors {
-        let authenticationInteractor = DefaultAuthenticationInteractor()
-        
+        let authenticationInteractor = DefaultAuthenticationInteractor(appState: appState)
+
         return .init(authenticationInteractor: authenticationInteractor)
     }
 }
