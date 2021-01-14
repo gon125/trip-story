@@ -2,7 +2,7 @@
 //  Helpers.swift
 //  TripStory
 //
-//  Created by Gon on 2021/01/09.
+//  Created by Gon on 2021/01/14.
 //
 
 import Foundation
