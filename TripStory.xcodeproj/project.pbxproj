@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC4F25AE8907007D99AD /* FindPasswordView.swift */; };
+		B306CC5725AEB094007D99AD /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC5625AEB094007D99AD /* AuthenticationRepository.swift */; };
+		B306CC7225B03058007D99AD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC7125B03058007D99AD /* Helpers.swift */; };
 		B3247D3C25A9FE340002A7EA /* EnvironmentOverrides in Frameworks */ = {isa = PBXBuildFile; productRef = B3247D3B25A9FE340002A7EA /* EnvironmentOverrides */; };
 		B3247D4025A9FEA70002A7EA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3247D3F25A9FEA70002A7EA /* Launch Screen.storyboard */; };
 		B3247D4425AA00290002A7EA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B3247D4325AA00290002A7EA /* logo.png */; };
@@ -46,7 +48,6 @@
 		B3CE284225A9C86800C5E0A9 /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284125A9C86800C5E0A9 /* InteractorsContainer.swift */; };
 		B3CE284925A9CB8600C5E0A9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284825A9CB8600C5E0A9 /* AppEnvironment.swift */; };
 		B3CE284D25A9D09700C5E0A9 /* AuthenticationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284C25A9D09700C5E0A9 /* AuthenticationInteractor.swift */; };
-		B3CE285125A9D85100C5E0A9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE285025A9D85100C5E0A9 /* Helpers.swift */; };
 		B3F8D1BC25AD4D320039D9D8 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = B3F8D1BB25AD4D320039D9D8 /* ViewInspector */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		B306CC4F25AE8907007D99AD /* FindPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordView.swift; sourceTree = "<group>"; };
+		B306CC5625AEB094007D99AD /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		B306CC7125B03058007D99AD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		B3247D3F25A9FEA70002A7EA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B3247D4325AA00290002A7EA /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		B3247D4B25AA08750002A7EA /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -104,7 +107,6 @@
 		B3CE284125A9C86800C5E0A9 /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
 		B3CE284825A9CB8600C5E0A9 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		B3CE284C25A9D09700C5E0A9 /* AuthenticationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInteractor.swift; sourceTree = "<group>"; };
-		B3CE285025A9D85100C5E0A9 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,14 @@
 				B306CC4F25AE8907007D99AD /* FindPasswordView.swift */,
 			);
 			path = FindPasswordView;
+			sourceTree = "<group>";
+		};
+		B306CC5525AEB072007D99AD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B306CC5625AEB094007D99AD /* AuthenticationRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		B3247D3A25A9FE340002A7EA /* Frameworks */ = {
@@ -230,6 +240,7 @@
 		B3A8FAA425AD939E00389A68 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				B306CC5525AEB072007D99AD /* Repositories */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -311,6 +322,7 @@
 				B3283FDD25ABF9FD00392CCA /* SystemEventsHandler.swift */,
 				B3283FE325AC13F100392CCA /* DeepLinksHandler.swift */,
 				B3283FE725AC2DD100392CCA /* PushNotificationsHandler.swift */,
+				B306CC7125B03058007D99AD /* Helpers.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -369,7 +381,6 @@
 			isa = PBXGroup;
 			children = (
 				B3CE283D25A9BE5700C5E0A9 /* Store.swift */,
-				B3CE285025A9D85100C5E0A9 /* Helpers.swift */,
 				B3247D5725AA1EDF0002A7EA /* CancelBag.swift */,
 				B37DAC3C25AD886B007855E6 /* Errors.swift */,
 			);
@@ -391,6 +402,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3CE27C125A8AED700C5E0A9 /* Build configuration list for PBXNativeTarget "TripStory" */;
 			buildPhases = (
+				B306CC6425B02494007D99AD /* Run Swiftlint */,
 				B3CE279825A8AED300C5E0A9 /* Sources */,
 				B3CE279925A8AED300C5E0A9 /* Frameworks */,
 				B3CE279A25A8AED300C5E0A9 /* Resources */,
@@ -497,6 +509,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B306CC6425B02494007D99AD /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B3CE279825A8AED300C5E0A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -508,15 +541,16 @@
 				B3CE284225A9C86800C5E0A9 /* InteractorsContainer.swift in Sources */,
 				B3247D5425AA17070002A7EA /* StartView.swift in Sources */,
 				B3CE27FE25A9474F00C5E0A9 /* DependencyInjector.swift in Sources */,
-				B3CE285125A9D85100C5E0A9 /* Helpers.swift in Sources */,
 				B3247D4C25AA08750002A7EA /* ErrorView.swift in Sources */,
 				B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */,
 				B37DAC2F25AD5C2E007855E6 /* StyleGuides.swift in Sources */,
 				B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */,
 				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
 				B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */,
+				B306CC5725AEB094007D99AD /* AuthenticationRepository.swift in Sources */,
 				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
 				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
+				B306CC7225B03058007D99AD /* Helpers.swift in Sources */,
 				B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationInteractor.swift in Sources */,
 				B3247D7425AA3A9C0002A7EA /* Colors.swift in Sources */,
