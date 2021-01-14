@@ -8,7 +8,7 @@
 extension DIContainer {
     struct Interactors {
         let authenticationInteractor: AuthenticationInteractor
-        
+
         #if DEBUG
         static var stub: Self {
             .init(authenticationInteractor: StubAuthenticationInteractor())

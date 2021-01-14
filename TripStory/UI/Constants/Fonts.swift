@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 extension Font {
     public static let title = custom(nanumSquareRegular, size: 85)
     public static let subtitle = custom(nanumSquareRegular, size: 16)

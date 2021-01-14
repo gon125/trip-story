@@ -10,7 +10,7 @@ import Combine
 import EnvironmentOverrides
 
 struct ContentView: View {
-    
+
     @Environment(\.injected) private var injected: DIContainer
     private let isRunningTests: Bool
     @State private(set) var loginState: AppState.LoginState = .notRequested
@@ -18,7 +18,7 @@ struct ContentView: View {
     init(isRunningTests: Bool = ProcessInfo.processInfo.isRunningTests) {
         self.isRunningTests = isRunningTests
     }
-    
+
     var body: some View {
         Group {
             if isRunningTests {
@@ -26,15 +26,15 @@ struct ContentView: View {
             } else {
                 ZStack {
                     self.content
-                        .attachEnvironmentOverrides()
                         .onReceive(loginStateUpdate) { self.loginState = $0 }
-                    //self.popup
+                        .attachEnvironmentOverrides()
+                    // self.popup
                 }
-                
+
             }
         }
     }
-    
+
     var onChangeHandler: (EnvironmentValues.Diff) -> Void {
         return { diff in
             if !diff.isDisjoint(with: [.locale, .sizeCategory]) {
@@ -42,14 +42,14 @@ struct ContentView: View {
             }
         }
     }
-    
+
     private var content: AnyView {
         switch loginState {
         case .sucess: return AnyView(MainView())
         default: return AnyView(StartView())
         }
     }
-    
+
 //    private var popup: AnyView {
 //        switch viewModel.loginState {
 //        case let .failed(error):
@@ -61,11 +61,11 @@ struct ContentView: View {
 }
 
 private extension ContentView {
-    
+
     var loginStateUpdate: AnyPublisher<AppState.LoginState, Never> {
         injected.appState.updates(for: \.loginState)
     }
-    
+
 //    var notRequesetedView: some View {
 //        Login
 //    }

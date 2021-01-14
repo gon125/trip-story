@@ -13,22 +13,22 @@ typealias NotificationPayload = [AnyHashable: Any]
 typealias FetchCompletion = (UIBackgroundFetchResult) -> Void
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    //func application
+    // func application
 }
 
 @main
 struct TripStoryApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @Environment(\.scenePhase) private var scenePhase
-    
+
     let environment: AppEnvironment
     var systemEventsHandler: SystemEventsHandler?
-    
+
     init() {
         environment = AppEnvironment.bootstrap()
         systemEventsHandler = environment.systemEventsHandler
     }
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView().inject(environment.container)
@@ -42,6 +42,5 @@ struct TripStoryApp: App {
             }
         }
     }
-    
-    
+
 }

@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-//MARK - Navigation Bar Appearance
+// MARK: - Navigation Bar Appearance
 extension UINavigationController {
     override open func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.titleTextAttributes = [
             .foregroundColor: UIColor.white,
@@ -22,7 +22,7 @@ extension UINavigationController {
             .foregroundColor: UIColor.clear
         ]
         standardAppearance.configureWithTransparentBackground()
-        
+
         navigationBar.standardAppearance = standardAppearance
     }
 }

@@ -12,7 +12,7 @@ struct StartView: View {
         NavigationView {
             ZStack {
                 Color.major.ignoresSafeArea()
-                
+
                 VStack {
                     Text("Trip Story")
                         .font(.title)
@@ -39,7 +39,7 @@ struct StartView: View {
                             .font(.subtitle)
                     }
                     Spacer()
-                    
+
                 }
                 .foregroundColor(.white)
                 .padding(.horizontal, .horizontalPadding)
@@ -48,12 +48,6 @@ struct StartView: View {
         // for navigation bar back button color
         .accentColor(.white)
         .navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-extension StartView {
-    private struct styles {
-        
     }
 }
 

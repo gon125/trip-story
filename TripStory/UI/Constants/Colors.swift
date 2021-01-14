@@ -8,6 +8,6 @@ import SwiftUI
 
 extension Color {
     public static let major =  Color("Major Color")
-    
+
     public static let red = Color("Red Color")
 }
