@@ -10,7 +10,7 @@ struct AppState: Equatable {
     var routing = ViewRouting()
     var system = System()
     var loginState: LoginState = .notRequested
-    //var permissions = Permissions()
+    // var permissions = Permissions()
 }
 
 extension AppState {
@@ -46,28 +46,17 @@ extension AppState {
             default: return false
             }
         }
-        
-        
+
         case notRequested
         case isInProgress
         case sucess
-        case failed(Error)
-        
-        var error: Error? {
-            switch self {
-            case let .failed(error): return error
-            default: return nil
-            }
-        }
+        case failed(LoginError)
     }
 }
 
-
-
-
-//func == (lhs: AppState, rhs: AppState) -> Bool {
+// func == (lhs: AppState, rhs: AppState) -> Bool {
 //
-//}
+// }
 
 #if DEBUG
 extension AppState {
@@ -78,5 +67,3 @@ extension AppState {
     }
 }
 #endif
-
-

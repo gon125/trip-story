@@ -9,7 +9,7 @@ import Combine
 
 public final class CancelBag {
     fileprivate(set) var subsriptions = Set<AnyCancellable>()
-    
+
     func cancel() {
         subsriptions.removeAll()
     }
