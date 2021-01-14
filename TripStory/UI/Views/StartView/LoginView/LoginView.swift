@@ -6,38 +6,45 @@
 //
 
 import SwiftUI
+import Combine
 
 struct LoginView: View {
-    
+
     @Environment(\.injected) private var injected: DIContainer
-    @State private var id: String = ""
+    @State private var username: String = ""
     @State private var password: String = ""
-    @State private var loginFailed: Bool = false
-    
+
     var body: some View {
         ZStack {
             Color.major.ignoresSafeArea()
             VStack(alignment: .leading) {
                 Spacer()
-                TextField("UserID", text: $id)
-                    .modifier(TextFiledModifier())
+
+                TextField("UserID", text: $username)
+                    .modifier(LoginTextFiledModifier(checkingError: LoginError.invalidUsername))
                 Spacer().frame(height: 40)
                 SecureField("Password", text: $password)
-                    .modifier(TextFiledModifier())
+                    .modifier(LoginTextFiledModifier(checkingError: LoginError.invalidPassword))
+
                 Spacer().frame(height: 20)
                 HStack { Spacer()
                     NavigationLink(
-                        destination: FindPasswordView(id: $id)) {
+                        destination: FindPasswordView(username: $username)) {
                         Text("Forgot password?")
                             .modifier(TextButtonModifier())
                     }
-                    
+
                 }
                 Spacer().frame(height: 60)
-                Button(action: { }) {
-                    Text("Sign In")
-                        .modifier(ButtonModifier())
-                }
+                Button(
+                    action: { injected.interactors.authenticationInteractor
+                        .login(username: username, password: password)
+                            },
+                    label: {
+                        Text("Sign In")
+                            .modifier(ButtonModifier())
+                    }
+                )
                 Spacer()
             }
             .padding(.horizontal, .horizontalPadding)
@@ -45,7 +52,13 @@ struct LoginView: View {
         .navigationTitle("Log In")
         .navigationBarTitleDisplayMode(.inline)
     }
-    
+
+}
+
+private extension LoginView {
+    var loginStateUpdate: AnyPublisher<AppState.LoginState, Never> {
+        injected.appState.updates(for: \.loginState)
+    }
 }
 
 #if DEBUG
