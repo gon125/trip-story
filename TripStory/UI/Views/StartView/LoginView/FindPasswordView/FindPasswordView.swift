@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct FindPasswordView: View {
-    @Binding var id: String
-    
+    @Binding var username: String
+
     var body: some View {
         ZStack {
             Color.major.ignoresSafeArea()
             VStack(alignment: .leading) {
                 Spacer()
-                TextField("UserID", text: $id)
-                    .modifier(TextFiledModifier())
+                TextField("UserID", text: $username)
+                    .modifier(LoginTextFiledModifier(checkingError: LoginError.invalidUsername))
                 Spacer().frame(height: 160)
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {}/*@END_MENU_TOKEN@*/, label: {
                     Text("Find Password")
                         .modifier(ButtonModifier())
                 })
@@ -34,7 +34,7 @@ struct FindPasswordView: View {
 #if DEBUG
 struct FindPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        FindPasswordView(id: .constant("test"))
+        FindPasswordView(username: .constant("test"))
             .environment(\.locale, .init(identifier: "ko"))
     }
 }
