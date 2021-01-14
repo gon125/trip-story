@@ -6,6 +6,12 @@
 "Forgot password?" = "비밀번호 찾기";
 
 
+"Invalid Password" = "올바른 비밀번호를 입력하세요";
+
+
+"Invalid Username" = "올바른 아이디를 입력하세요";
+
+
 "Log In" = "로그인";
 
 
