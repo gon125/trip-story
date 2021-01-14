@@ -9,7 +9,10 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text("Main")
+        ZStack {
+            Color.major.ignoresSafeArea()
+            Text("Main")
+        }
     }
 }
 
