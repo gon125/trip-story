@@ -13,6 +13,7 @@ struct LoginView: View {
     @Environment(\.injected) private var injected: DIContainer
     @State private var username: String = ""
     @State private var password: String = ""
+    @State private var loginInProgress = false
 
     var body: some View {
         ZStack {
@@ -41,10 +42,13 @@ struct LoginView: View {
                         .login(username: username, password: password)
                             },
                     label: {
-                        Text("Sign In")
-                            .modifier(ButtonModifier())
+                        LoadingButtonView("Sign In", isLoading: $loginInProgress)
                     }
                 )
+                .onReceive(loginStateUpdate) {
+                    self.loginInProgress = $0 == .isInProgress ? true : false
+                }
+                .disabled(self.loginInProgress)
                 Spacer()
             }
             .padding(.horizontal, .horizontalPadding)
