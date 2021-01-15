@@ -43,21 +43,20 @@ struct ContentView: View {
         }
     }
 
-    private var content: AnyView {
+    @ViewBuilder private var content: some View {
         switch loginState {
-        case .success: return AnyView(MainView())
-        default: return AnyView(StartView())
+        case .success: MainView()
+        default: StartView()
         }
     }
 
-//    private var popup: AnyView {
-//        switch viewModel.loginState {
-//        case let .failed(error):
-//            <#code#>
-//        default:
-//            <#code#>
+//    @ViewBuilder private var popup: some View {
+//        switch loginState {
+//        case .isInProgress: ProgressView()
+//        default: Text("")
 //        }
 //    }
+
 }
 
 private extension ContentView {
