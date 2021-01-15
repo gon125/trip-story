@@ -35,6 +35,7 @@
 		B37DAC3325AD792A007855E6 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3225AD792A007855E6 /* TextFieldModifier.swift */; };
 		B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */; };
 		B37DAC3D25AD886B007855E6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3C25AD886B007855E6 /* Errors.swift */; };
+		B3BFB35125B18165007F0B9D /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BFB35025B18165007F0B9D /* LoadingButton.swift */; };
 		B3CE27A025A8AED300C5E0A9 /* TripStoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */; };
 		B3CE27A225A8AED300C5E0A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE27A125A8AED300C5E0A9 /* ContentView.swift */; };
 		B3CE27A425A8AED600C5E0A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3CE27A325A8AED600C5E0A9 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		B37DAC3225AD792A007855E6 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifiers.swift; sourceTree = "<group>"; };
 		B37DAC3C25AD886B007855E6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		B3BFB35025B18165007F0B9D /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		B3CE279C25A8AED300C5E0A9 /* TripStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStoryApp.swift; sourceTree = "<group>"; };
 		B3CE27A125A8AED300C5E0A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				B3247D4B25AA08750002A7EA /* ErrorView.swift */,
+				B3BFB35025B18165007F0B9D /* LoadingButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
 				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
 				B306CC7225B03058007D99AD /* Helpers.swift in Sources */,
+				B3BFB35125B18165007F0B9D /* LoadingButton.swift in Sources */,
 				B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationInteractor.swift in Sources */,
 				B3247D7425AA3A9C0002A7EA /* Colors.swift in Sources */,
