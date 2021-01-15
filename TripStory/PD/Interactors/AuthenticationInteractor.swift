@@ -4,9 +4,6 @@
 //
 //  Created by Gon on 2021/01/09.
 //
-
-import Foundation
-
 protocol AuthenticationInteractor {
     func login(username: String, password: String)
 
@@ -33,7 +30,7 @@ struct DefaultAuthenticationInteractor: AuthenticationInteractor {
             return
         }
 
-        appState[\.loginState] = .sucess
+        appState[\.loginState] = .success
     }
 
     private func isValidUsername(_ username: String) -> Bool {

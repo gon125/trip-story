@@ -41,7 +41,7 @@ extension AppState {
             switch (lhs, rhs) {
             case (.notRequested, .notRequested): return true
             case (.isInProgress, .isInProgress): return true
-            case (.sucess, .sucess): return true
+            case (.success, .success): return true
             case let (.failed(lhsE), .failed(rhsE)): return lhsE.localizedDescription == rhsE.localizedDescription
             default: return false
             }
@@ -49,7 +49,7 @@ extension AppState {
 
         case notRequested
         case isInProgress
-        case sucess
+        case success
         case failed(LoginError)
     }
 }

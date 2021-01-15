@@ -45,7 +45,7 @@ struct ContentView: View {
 
     private var content: AnyView {
         switch loginState {
-        case .sucess: return AnyView(MainView())
+        case .success: return AnyView(MainView())
         default: return AnyView(StartView())
         }
     }
