@@ -19,17 +19,17 @@ struct SignUpView: View {
 
                 TextField("UserID", text: $viewModel.username)
                     .modifier(
-                        TextFiledModifier(
+                        TextFieldModifier(
                             isValid: $viewModel.isValidUsername ,
                             description: $viewModel.usernameStateString
                         )
                     )
                 Spacer().frame(height: 40)
                 SecureField("Password", text: $viewModel.password)
-                    .modifier(TextFiledModifier(isValid: $viewModel.isValidPassword))
+                    .modifier(TextFieldModifier(isValid: $viewModel.isValidPassword))
                 SecureField("Password Again", text: $viewModel.passwordAgain)
                     .modifier(
-                        TextFiledModifier(
+                        TextFieldModifier(
                             isValid: $viewModel.isValidPassword ,
                             description: $viewModel.passwordStateString
                         )
@@ -65,7 +65,7 @@ extension SignUpView {
         @Published var isLoading = false
         @Published var isValidUsername = false
         @Published var isValidPassword = false
-        private var interactor: SignupInteractor
+        private let interactor: SignupInteractor
 
         init(interactor: SignupInteractor) {
             self.interactor = interactor
