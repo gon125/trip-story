@@ -25,7 +25,12 @@ extension AppEnvironment {
     private static func configuredInteractors(appState: Store<AppState>) -> DIContainer.Interactors {
         let authenticationInteractor = DefaultAuthenticationInteractor(appState: appState)
         let signupInteractor = DefaultSignupInteractor()
+        let loginInteractor = DefaultLoginInteractor(appState: appState)
 
-        return .init(authenticationInteractor: authenticationInteractor, signupInteractor: signupInteractor)
+        return .init(
+            authenticationInteractor: authenticationInteractor,
+            signupInteractor: signupInteractor,
+            loginInteractor: loginInteractor
+        )
     }
 }
