@@ -31,8 +31,11 @@
 		B365C22E25AC8B170095C52F /* NanumSquareBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22A25AC8B160095C52F /* NanumSquareBold.ttf */; };
 		B365C22F25AC8B170095C52F /* NanumSquareLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22B25AC8B170095C52F /* NanumSquareLight.ttf */; };
 		B365C23025AC8B170095C52F /* NanumSquareRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */; };
+		B376644025B4092200FE6A08 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376643F25B4092200FE6A08 /* LoginInteractor.swift */; };
+		B376644425B40B7B00FE6A08 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376644325B40B7B00FE6A08 /* SignupInteractor.swift */; };
+		B376644C25B4134B00FE6A08 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376644B25B4134B00FE6A08 /* States.swift */; };
 		B37DAC2F25AD5C2E007855E6 /* StyleGuides.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC2E25AD5C2E007855E6 /* StyleGuides.swift */; };
-		B37DAC3325AD792A007855E6 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3225AD792A007855E6 /* TextFieldModifier.swift */; };
+		B37DAC3325AD792A007855E6 /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3225AD792A007855E6 /* TextFieldModifiers.swift */; };
 		B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */; };
 		B37DAC3D25AD886B007855E6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3C25AD886B007855E6 /* Errors.swift */; };
 		B3BFB35125B18165007F0B9D /* LoadingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */; };
@@ -86,8 +89,11 @@
 		B365C22A25AC8B160095C52F /* NanumSquareBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareBold.ttf; sourceTree = "<group>"; };
 		B365C22B25AC8B170095C52F /* NanumSquareLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareLight.ttf; sourceTree = "<group>"; };
 		B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRegular.ttf; sourceTree = "<group>"; };
+		B376643F25B4092200FE6A08 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		B376644325B40B7B00FE6A08 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
+		B376644B25B4134B00FE6A08 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		B37DAC2E25AD5C2E007855E6 /* StyleGuides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuides.swift; sourceTree = "<group>"; };
-		B37DAC3225AD792A007855E6 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		B37DAC3225AD792A007855E6 /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 		B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifiers.swift; sourceTree = "<group>"; };
 		B37DAC3C25AD886B007855E6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButtonView.swift; sourceTree = "<group>"; };
@@ -223,7 +229,7 @@
 			children = (
 				B3247D5B25AA28BC0002A7EA /* RootViewModifier.swift */,
 				B365C20225AC4F830095C52F /* NavigationBarModifier.swift */,
-				B37DAC3225AD792A007855E6 /* TextFieldModifier.swift */,
+				B37DAC3225AD792A007855E6 /* TextFieldModifiers.swift */,
 				B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */,
 			);
 			path = ViewModifiers;
@@ -238,6 +244,22 @@
 				B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B376644725B40BA200FE6A08 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B376644A25B4132B00FE6A08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B37DAC3C25AD886B007855E6 /* Errors.swift */,
+				B376644B25B4134B00FE6A08 /* States.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B3A8FAA425AD939E00389A68 /* Interfaces */ = {
@@ -288,6 +310,8 @@
 		B3CE27CD25A8AEEA00C5E0A9 /* PD */ = {
 			isa = PBXGroup;
 			children = (
+				B376644A25B4132B00FE6A08 /* Models */,
+				B376644725B40BA200FE6A08 /* Services */,
 				B3A8FAA425AD939E00389A68 /* Interfaces */,
 				B3CE284525A9C8BC00C5E0A9 /* Interactors */,
 				B3CE27F825A946EC00C5E0A9 /* AppState.swift */,
@@ -385,7 +409,6 @@
 			children = (
 				B3CE283D25A9BE5700C5E0A9 /* Store.swift */,
 				B3247D5725AA1EDF0002A7EA /* CancelBag.swift */,
-				B37DAC3C25AD886B007855E6 /* Errors.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -394,6 +417,8 @@
 			isa = PBXGroup;
 			children = (
 				B3CE284C25A9D09700C5E0A9 /* AuthenticationInteractor.swift */,
+				B376643F25B4092200FE6A08 /* LoginInteractor.swift */,
+				B376644325B40B7B00FE6A08 /* SignupInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -546,12 +571,14 @@
 				B3CE27FE25A9474F00C5E0A9 /* DependencyInjector.swift in Sources */,
 				B3247D4C25AA08750002A7EA /* ErrorView.swift in Sources */,
 				B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */,
+				B376644025B4092200FE6A08 /* LoginInteractor.swift in Sources */,
 				B37DAC2F25AD5C2E007855E6 /* StyleGuides.swift in Sources */,
 				B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */,
 				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
 				B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */,
 				B306CC5725AEB094007D99AD /* AuthenticationRepository.swift in Sources */,
 				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
+				B376644425B40B7B00FE6A08 /* SignupInteractor.swift in Sources */,
 				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
 				B306CC7225B03058007D99AD /* Helpers.swift in Sources */,
 				B3BFB35125B18165007F0B9D /* LoadingButtonView.swift in Sources */,
@@ -560,9 +587,10 @@
 				B3247D7425AA3A9C0002A7EA /* Colors.swift in Sources */,
 				B3247D5025AA0C130002A7EA /* MainView.swift in Sources */,
 				B3283FDE25ABF9FD00392CCA /* SystemEventsHandler.swift in Sources */,
-				B37DAC3325AD792A007855E6 /* TextFieldModifier.swift in Sources */,
+				B37DAC3325AD792A007855E6 /* TextFieldModifiers.swift in Sources */,
 				B37DAC3D25AD886B007855E6 /* Errors.swift in Sources */,
 				B3CE27F925A946EC00C5E0A9 /* AppState.swift in Sources */,
+				B376644C25B4134B00FE6A08 /* States.swift in Sources */,
 				B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */,
 				B3283FEC25AC388600392CCA /* LoginView.swift in Sources */,
 				B3CE27A225A8AED300C5E0A9 /* ContentView.swift in Sources */,
