@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StartView: View {
+    @Environment(\.injected) private var injected: DIContainer
     var body: some View {
         NavigationView {
             ZStack {
@@ -27,7 +28,7 @@ struct StartView: View {
                     }
                     Spacer().frame(minHeight: 12, maxHeight: 18)
                     NavigationLink(
-                        destination: SignUpView()) {
+                        destination: SignUpView(viewModel: .init(interactor: injected.interactors.signupInteractor))) {
                         Text("Sign Up")
                             .modifier(ButtonModifier())
                     }
