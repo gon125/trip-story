@@ -60,7 +60,7 @@ struct LoginView: View {
 }
 
 private extension LoginView {
-    var loginStateUpdate: AnyPublisher<AppState.LoginState, Never> {
+    var loginStateUpdate: AnyPublisher<LoginState, Never> {
         injected.appState.updates(for: \.loginState)
     }
 }
