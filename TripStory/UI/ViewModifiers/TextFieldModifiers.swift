@@ -44,7 +44,7 @@ struct LoginTextFiledModifier: ViewModifier {
     }
 }
 
-struct TextFiledModifier: ViewModifier {
+struct TextFieldModifier: ViewModifier {
     @Binding private var isValid: Bool
     @Binding private var description: String
 
