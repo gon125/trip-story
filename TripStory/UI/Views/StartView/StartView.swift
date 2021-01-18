@@ -22,7 +22,14 @@ struct StartView: View {
                         .font(.subtitle)
                     Spacer()
                     NavigationLink(
-                        destination: LoginView()) {
+                        destination:
+                            LoginView(
+                                viewModel: .init(
+                                    interactor: injected.interactors.loginInteractor,
+                                    appState: injected.appState
+                                )
+                            )
+                    ) {
                         Text("Log In")
                             .modifier(ButtonModifier())
                     }
