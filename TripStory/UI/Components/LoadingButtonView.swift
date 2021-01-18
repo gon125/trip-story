@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct LoadingButtonView: View {
-    let title: String
+    let title: LocalizedStringKey
     @Binding var isLoading: Bool
 
-    init(_ title: String, isLoading: Binding<Bool> = .init(.constant(false))!) {
+    init(_ title: LocalizedStringKey, isLoading: Binding<Bool> = .init(.constant(false))!) {
         self.title = title
         self._isLoading = isLoading
     }
