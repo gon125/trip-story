@@ -13,7 +13,7 @@ struct ContentView: View {
 
     @Environment(\.injected) private var injected: DIContainer
     private let isRunningTests: Bool
-    @State private(set) var loginState: AppState.LoginState = .notRequested
+    @State private(set) var loginState: LoginState = .notRequested
 
     init(isRunningTests: Bool = ProcessInfo.processInfo.isRunningTests) {
         self.isRunningTests = isRunningTests
@@ -61,7 +61,7 @@ struct ContentView: View {
 
 private extension ContentView {
 
-    var loginStateUpdate: AnyPublisher<AppState.LoginState, Never> {
+    var loginStateUpdate: AnyPublisher<LoginState, Never> {
         injected.appState.updates(for: \.loginState)
     }
 
