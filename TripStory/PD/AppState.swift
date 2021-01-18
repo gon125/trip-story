@@ -5,7 +5,7 @@
 //  Created by Gon on 2021/01/09.
 //
 
-struct AppState: Equatable {
+struct AppState: CustomState {
     var userData = UserData()
     var routing = ViewRouting()
     var system = System()
@@ -36,22 +36,7 @@ extension AppState {
 }
 
 extension AppState {
-    enum LoginState: Equatable {
-        static func == (lhs: AppState.LoginState, rhs: AppState.LoginState) -> Bool {
-            switch (lhs, rhs) {
-            case (.notRequested, .notRequested): return true
-            case (.isInProgress, .isInProgress): return true
-            case (.success, .success): return true
-            case let (.failed(lhsE), .failed(rhsE)): return lhsE.localizedDescription == rhsE.localizedDescription
-            default: return false
-            }
-        }
 
-        case notRequested
-        case isInProgress
-        case success
-        case failed(LoginError)
-    }
 }
 
 // func == (lhs: AppState, rhs: AppState) -> Bool {
