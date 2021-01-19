@@ -303,10 +303,10 @@
 		B3CE27CD25A8AEEA00C5E0A9 /* PD */ = {
 			isa = PBXGroup;
 			children = (
+				B3CE284525A9C8BC00C5E0A9 /* Interactors */,
+				B376644725B40BA200FE6A08 /* Services */,
 				B306CC5525AEB072007D99AD /* Repositories */,
 				B376644A25B4132B00FE6A08 /* Models */,
-				B376644725B40BA200FE6A08 /* Services */,
-				B3CE284525A9C8BC00C5E0A9 /* Interactors */,
 				B3CE27F825A946EC00C5E0A9 /* AppState.swift */,
 				B3CE283A25A9BE4300C5E0A9 /* Utilities */,
 			);
