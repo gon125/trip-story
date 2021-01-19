@@ -1,15 +1,19 @@
 //
-//  AuthenticationInteractor.swift
+//  AuthenticationService.swift
 //  TripStory
 //
 //  Created by Gon on 2021/01/09.
 //
-protocol AuthenticationInteractor {
+import Combine
+
+protocol AuthenticationService {
     func login(username: String, password: String)
+//    func validatedPassword(password: Published<String>) -> AnyPublisher<String?, Never>
+//    func validatedUsername(username: Published<String>) -> AnyPublisher<String?, Never>
 
 }
 
-struct DefaultAuthenticationInteractor: AuthenticationInteractor {
+struct DefaultAuthenticationService: AuthenticationService {
 
     let appState: Store<AppState>
 
@@ -30,13 +34,15 @@ struct DefaultAuthenticationInteractor: AuthenticationInteractor {
             return
         }
 
-        appState[\.loginState] = .success
+        // appState[\.loginState] = .success
     }
 
     private func isValidUsername(_ username: String) -> Bool {
         guard username != "" else { return false }
         return true
     }
+
+//    private var isPasswordValid: AnyPublisher<>
 
     private func isValidPassword(_ password: String) -> Bool {
         guard password != "" else { return false }
@@ -46,7 +52,7 @@ struct DefaultAuthenticationInteractor: AuthenticationInteractor {
 }
 
 #if DEBUG
-struct StubAuthenticationInteractor: AuthenticationInteractor {
+struct StubAuthenticationService: AuthenticationService {
 
     func login(username: String, password: String) {
     }
