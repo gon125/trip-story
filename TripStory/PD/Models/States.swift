@@ -12,7 +12,7 @@ enum LoginState: CustomState {
     case notRequested
     case isInProgress
     case success
-    case failed(LoginError)
+    case failed(AuthError)
 }
 
 enum SignupState: CustomState {
