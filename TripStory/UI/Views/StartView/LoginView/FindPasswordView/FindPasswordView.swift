@@ -16,7 +16,7 @@ struct FindPasswordView: View {
             VStack(alignment: .leading) {
                 Spacer()
                 TextField("UserID", text: $username)
-                    .modifier(LoginTextFiledModifier(checkingError: LoginError.invalidUsername))
+                    .modifier(TextFieldModifier())
                 Spacer().frame(height: 160)
                 Button(action: {}/*@END_MENU_TOKEN@*/, label: {
                     Text("Find Password")
