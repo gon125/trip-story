@@ -19,9 +19,15 @@ protocol LoginInteractor {
 struct DefaultLoginInteractor: LoginInteractor {
 
     let appState: Store<AppState>
+    let authService: AuthenticationService
+    let cancelBag = CancelBag()
 
     func login(username: String, password: String) {
+
         appState[\.loginState] = .isInProgress
+        authService.login(username: username, password: password)
+            .sink(receiveValue: { appState[\.loginState] = $0})
+            .store(in: cancelBag)
     }
 
     func validationState(username: Published<String>.Publisher) -> AnyPublisher<UsernameState, Never> {
