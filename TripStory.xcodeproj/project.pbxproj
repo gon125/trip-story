@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B300010725B8060F001C46F7 /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300010625B8060F001C46F7 /* WebRepository.swift */; };
+		B300010B25B80663001C46F7 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300010A25B80663001C46F7 /* APICall.swift */; };
+		B300010F25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300010E25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift */; };
 		B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC4F25AE8907007D99AD /* FindPasswordView.swift */; };
 		B306CC5725AEB094007D99AD /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC5625AEB094007D99AD /* AuthenticationRepository.swift */; };
 		B306CC7225B03058007D99AD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC7125B03058007D99AD /* Helpers.swift */; };
@@ -49,7 +52,6 @@
 		B3CE281B25A9A89500C5E0A9 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE281A25A9A89500C5E0A9 /* UnitTests.swift */; };
 		B3CE283025A9A9FB00C5E0A9 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE282F25A9A9FB00C5E0A9 /* ContentViewTests.swift */; };
 		B3CE283E25A9BE5700C5E0A9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE283D25A9BE5700C5E0A9 /* Store.swift */; };
-		B3CE284225A9C86800C5E0A9 /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284125A9C86800C5E0A9 /* InteractorsContainer.swift */; };
 		B3CE284925A9CB8600C5E0A9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284825A9CB8600C5E0A9 /* AppEnvironment.swift */; };
 		B3CE284D25A9D09700C5E0A9 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284C25A9D09700C5E0A9 /* AuthenticationService.swift */; };
 		B3F8D1BC25AD4D320039D9D8 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = B3F8D1BB25AD4D320039D9D8 /* ViewInspector */; };
@@ -66,6 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B300010625B8060F001C46F7 /* WebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
+		B300010A25B80663001C46F7 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		B300010E25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthenticationRepository.swift; sourceTree = "<group>"; };
 		B306CC4F25AE8907007D99AD /* FindPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordView.swift; sourceTree = "<group>"; };
 		B306CC5625AEB094007D99AD /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		B306CC7125B03058007D99AD /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -112,7 +117,6 @@
 		B3CE281C25A9A89500C5E0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3CE282F25A9A9FB00C5E0A9 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		B3CE283D25A9BE5700C5E0A9 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		B3CE284125A9C86800C5E0A9 /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
 		B3CE284825A9CB8600C5E0A9 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		B3CE284C25A9D09700C5E0A9 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +141,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B300010425B805F5001C46F7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B300010E25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B300010525B805FD001C46F7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B300010625B8060F001C46F7 /* WebRepository.swift */,
+				B300010A25B80663001C46F7 /* APICall.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		B306CC4D25AE88C7007D99AD /* FindPasswordView */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +337,8 @@
 		B3CE27CE25A8AEF000C5E0A9 /* DM */ = {
 			isa = PBXGroup;
 			children = (
+				B300010525B805FD001C46F7 /* Utilities */,
+				B300010425B805F5001C46F7 /* Repositories */,
 			);
 			path = DM;
 			sourceTree = "<group>";
@@ -366,7 +389,6 @@
 			isa = PBXGroup;
 			children = (
 				B3CE27FD25A9474F00C5E0A9 /* DependencyInjector.swift */,
-				B3CE284125A9C86800C5E0A9 /* InteractorsContainer.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -558,7 +580,6 @@
 				B3CE284925A9CB8600C5E0A9 /* AppEnvironment.swift in Sources */,
 				B3283FE825AC2DD100392CCA /* PushNotificationsHandler.swift in Sources */,
 				B3CE283E25A9BE5700C5E0A9 /* Store.swift in Sources */,
-				B3CE284225A9C86800C5E0A9 /* InteractorsContainer.swift in Sources */,
 				B3247D5425AA17070002A7EA /* StartView.swift in Sources */,
 				B3CE27FE25A9474F00C5E0A9 /* DependencyInjector.swift in Sources */,
 				B3247D4C25AA08750002A7EA /* ErrorView.swift in Sources */,
@@ -568,11 +589,14 @@
 				B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */,
 				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
 				B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */,
+				B300010725B8060F001C46F7 /* WebRepository.swift in Sources */,
 				B306CC5725AEB094007D99AD /* AuthenticationRepository.swift in Sources */,
+				B300010B25B80663001C46F7 /* APICall.swift in Sources */,
 				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
 				B376644425B40B7B00FE6A08 /* SignupInteractor.swift in Sources */,
 				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
 				B306CC7225B03058007D99AD /* Helpers.swift in Sources */,
+				B300010F25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift in Sources */,
 				B3BFB35125B18165007F0B9D /* LoadingButtonView.swift in Sources */,
 				B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationService.swift in Sources */,
