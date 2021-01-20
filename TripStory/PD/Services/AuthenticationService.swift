@@ -7,55 +7,40 @@
 import Combine
 
 protocol AuthenticationService {
-    func login(username: String, password: String)
-//    func validatedPassword(password: Published<String>) -> AnyPublisher<String?, Never>
-//    func validatedUsername(username: Published<String>) -> AnyPublisher<String?, Never>
-
+    typealias AuthToken = String
+    func login(username: String, password: String) -> AnyPublisher<LoginState, Never>
+    func signup(username: String, password: String) -> AnyPublisher<SignupState, Never>
 }
 
 struct DefaultAuthenticationService: AuthenticationService {
+    let repository: AuthenticationRepository
 
-    let appState: Store<AppState>
+    func login(username: String, password: String) -> AnyPublisher<LoginState, Never> {
+        repository.getToken(with: username, password: password)
+            .map { result in
+                switch result {
+                case .success: return LoginState.success
+                case let .failure(authError): return LoginState.failed(authError)
+                }
+            }
+            .eraseToAnyPublisher()
 
-    init(appState: Store<AppState>) {
-        self.appState = appState
     }
 
-    func login(username: String, password: String) {
-        appState[\.loginState] = .isInProgress
-
-        guard isValidUsername(username) else {
-            appState[\.loginState] = .failed(LoginError.invalidUsername)
-            return
-        }
-
-        guard isValidPassword(password) else {
-            appState[\.loginState] = .failed(LoginError.invalidPassword)
-            return
-        }
-
-        // appState[\.loginState] = .success
+    func signup(username: String, password: String) -> AnyPublisher<SignupState, Never> {
+        Just(SignupState.failed(.invalidPassword(.empty))).eraseToAnyPublisher()
     }
 
-    private func isValidUsername(_ username: String) -> Bool {
-        guard username != "" else { return false }
-        return true
+ }
+
+ #if DEBUG
+ struct StubAuthenticationService: AuthenticationService {
+    func login(username: String, password: String) -> AnyPublisher<LoginState, Never> {
+        Just(LoginState.failed(.noMatchingUsername)).eraseToAnyPublisher()
     }
 
-//    private var isPasswordValid: AnyPublisher<>
-
-    private func isValidPassword(_ password: String) -> Bool {
-        guard password != "" else { return false }
-        return true
+    func signup(username: String, password: String) -> AnyPublisher<SignupState, Never> {
+        Just(SignupState.failed(.invalidPassword(.empty))).eraseToAnyPublisher()
     }
-
-}
-
-#if DEBUG
-struct StubAuthenticationService: AuthenticationService {
-
-    func login(username: String, password: String) {
-    }
-
-}
-#endif
+ }
+ #endif
