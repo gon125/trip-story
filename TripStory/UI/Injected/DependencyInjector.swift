@@ -28,6 +28,39 @@ struct DIContainer: EnvironmentKey {
 
 }
 
+extension DIContainer {
+    struct Interactors {
+        let signupInteractor: SignupInteractor
+        let loginInteractor: LoginInteractor
+
+        #if DEBUG
+        static var stub: Self {
+            .init(
+                signupInteractor: StubSignupInteractor(),
+                loginInteractor: StubLoginInteractor())
+        }
+        #endif
+    }
+}
+
+extension DIContainer {
+    struct Services {
+        let authenticationService: AuthenticationService
+
+        #if DEBUG
+        static var stub: Self {
+            .init(authenticationService: StubAuthenticationService())
+        }
+        #endif
+    }
+}
+
+extension DIContainer {
+    struct Repositories {
+        let authenticationRepository: AuthenticationRepository
+    }
+}
+
 extension EnvironmentValues {
     var injected: DIContainer {
         get { self[DIContainer.self] }
