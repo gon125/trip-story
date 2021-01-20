@@ -29,6 +29,20 @@ enum SignupError: CustomError {
     }
 }
 
+enum AuthError: CustomError {
+    case noMatchingUsername
+    case wrongPassword
+}
+
+extension AuthError {
+    var description: String {
+        switch self {
+        case .noMatchingUsername: return "There is no matching Username"
+        case .wrongPassword: return "Wrong Password"
+        }
+    }
+}
+
 extension LoginError {
     var description: String {
         switch self {
