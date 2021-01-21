@@ -12,7 +12,7 @@ struct LoginView: View {
     @Environment(\.injected) private var injected: DIContainer
     @ObservedObject private(set) var viewModel: ViewModel
     @State private(set) var loginFailed = false
-    @State private(set) var failedMessage = ""
+    @State private(set) var failedMessage: LocalizedStringKey = ""
 
     var body: some View {
         ZStack {
@@ -63,7 +63,7 @@ struct LoginView: View {
         .onReceive(loginStateUpdate) { loginState in
             switch loginState {
             case let .failed(error): loginFailed = true
-                failedMessage = error.description
+                failedMessage = LocalizedStringKey(error.description)
             default: loginFailed = false
             }
         }
