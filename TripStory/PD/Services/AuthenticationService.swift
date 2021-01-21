@@ -10,13 +10,15 @@ protocol AuthenticationService {
     func login(username: String, password: String) -> AnyPublisher<LoginState, Never>
     func signup(username: String, password: String) -> AnyPublisher<SignupState, Never>
     func isUserLoggedIn() -> AnyPublisher<Bool, Never>
+    func logout() -> AnyPublisher<Bool, Never>
 }
 
 struct DefaultAuthenticationService: AuthenticationService {
+
     let repository: AuthenticationRepository
 
     func login(username: String, password: String) -> AnyPublisher<LoginState, Never> {
-        repository.getToken(with: username, password: password)
+        repository.createToken(with: username, password: password)
             .map { result in
                 switch result {
                 case .success: return LoginState.success
@@ -25,6 +27,10 @@ struct DefaultAuthenticationService: AuthenticationService {
             }
             .eraseToAnyPublisher()
 
+    }
+
+    func logout() -> AnyPublisher<Bool, Never> {
+        repository.deleteToken()
     }
 
     func signup(username: String, password: String) -> AnyPublisher<SignupState, Never> {
@@ -43,6 +49,11 @@ struct DefaultAuthenticationService: AuthenticationService {
 
  #if DEBUG
  struct StubAuthenticationService: AuthenticationService {
+    func logout() -> AnyPublisher<Bool, Never> {
+        Just(false)
+            .eraseToAnyPublisher()
+    }
+
     func isUserLoggedIn() -> AnyPublisher<Bool, Never> {
         Just(false)
             .eraseToAnyPublisher()
