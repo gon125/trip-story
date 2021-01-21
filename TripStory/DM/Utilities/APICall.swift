@@ -14,7 +14,7 @@ protocol APICall {
     func body() throws -> Data?
 }
 
-enum APIError: Error, CustomStringConvertible {
+enum APIError: CustomError {
     case invalidURL
     case httpCode(HTTPCode)
     case unexpectedResponse
