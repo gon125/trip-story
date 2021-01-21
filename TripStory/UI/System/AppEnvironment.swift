@@ -20,9 +20,18 @@ extension AppEnvironment {
         let repositories = configuredRepositories(session: session)
         let services = configuredServices(repositories: repositories)
         let interactors = configuredInteractors(appState: appState, services: services)
-
         let diContainer = DIContainer(appState: appState, interactors: interactors)
         let systemEventHandler = DefaultSystemEventHandler(container: diContainer)
+
+        let cancelBag = CancelBag()
+
+        services.authenticationService.isUserLoggedIn()
+            .sink(receiveValue: { isLoggedin in
+                if isLoggedin {
+                    appState[\.loginState] = .success
+                }
+            })
+            .store(in: cancelBag)
         return AppEnvironment(container: diContainer, systemEventsHandler: systemEventHandler)
     }
 
