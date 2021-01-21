@@ -33,6 +33,9 @@
 "Sign Up" = "회원가입";
 
 
+"There is no matching Username" = "일치하는 아이디가 존재하지 않습니다";
+
+
 "Those passwords didin't match. Try again." = "두 비밀번호가 일치하지 않습니다.";
 
 
@@ -43,6 +46,9 @@
 
 
 "UserID" = "아이디";
+
+
+"Wrong Password" = "비밀번호가 틀렸습니다";
 
 
 "You deserve a good trip!" = "열심히 일 한 당신 떠나요!";

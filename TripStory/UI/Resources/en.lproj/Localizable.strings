@@ -33,6 +33,9 @@
 "Sign Up" = "Sign Up";
 
 
+"There is no matching Username" = "There is no matching Username";
+
+
 "Those passwords didin't match. Try again." = "Those passwords didin't match. Try again.";
 
 
@@ -43,6 +46,9 @@
 
 
 "UserID" = "UserID";
+
+
+"Wrong Password" = "Wrong Password";
 
 
 "You deserve a good trip!" = "You deserve a good trip!";
