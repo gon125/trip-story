@@ -22,6 +22,6 @@ final class ContentViewTests: XCTestCase {
 
     func test_content_for_build() throws {
         let sut = ContentView(isRunningTests: false)
-        XCTAssertNoThrow(try sut.inspect().group().zStack(0).anyView(0))
+        XCTAssertNoThrow(try sut.inspect().group().zStack(0))
     }
 }
