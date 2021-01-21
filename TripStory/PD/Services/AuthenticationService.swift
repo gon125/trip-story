@@ -7,7 +7,6 @@
 import Combine
 
 protocol AuthenticationService {
-    typealias AuthToken = String
     func login(username: String, password: String) -> AnyPublisher<LoginState, Never>
     func signup(username: String, password: String) -> AnyPublisher<SignupState, Never>
 }
@@ -20,7 +19,7 @@ struct DefaultAuthenticationService: AuthenticationService {
             .map { result in
                 switch result {
                 case .success: return LoginState.success
-                case let .failure(authError): return LoginState.failed(authError)
+                case let .failure(authError): return LoginState.failed(LoginError.externalError(authError.description))
                 }
             }
             .eraseToAnyPublisher()
@@ -36,7 +35,7 @@ struct DefaultAuthenticationService: AuthenticationService {
  #if DEBUG
  struct StubAuthenticationService: AuthenticationService {
     func login(username: String, password: String) -> AnyPublisher<LoginState, Never> {
-        Just(LoginState.failed(.noMatchingUsername)).eraseToAnyPublisher()
+        Just(LoginState.failed(.externalError("test"))).eraseToAnyPublisher()
     }
 
     func signup(username: String, password: String) -> AnyPublisher<SignupState, Never> {
