@@ -28,6 +28,7 @@
 		B3283FE825AC2DD100392CCA /* PushNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FE725AC2DD100392CCA /* PushNotificationsHandler.swift */; };
 		B3283FEC25AC388600392CCA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FEB25AC388600392CCA /* LoginView.swift */; };
 		B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FF525AC394E00392CCA /* SignUpView.swift */; };
+		B32EE28825B916AA00B5473D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B32EE28725B916AA00B5473D /* KeychainAccess */; };
 		B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20225AC4F830095C52F /* NavigationBarModifier.swift */; };
 		B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20925AC7C2B0095C52F /* Fonts.swift */; };
 		B365C22D25AC8B170095C52F /* NanumSquareExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */; };
@@ -126,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B32EE28825B916AA00B5473D /* KeychainAccess in Frameworks */,
 				B3247D3C25A9FE340002A7EA /* EnvironmentOverrides in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +458,7 @@
 			name = TripStory;
 			packageProductDependencies = (
 				B3247D3B25A9FE340002A7EA /* EnvironmentOverrides */,
+				B32EE28725B916AA00B5473D /* KeychainAccess */,
 			);
 			productName = TripStory;
 			productReference = B3CE279C25A8AED300C5E0A9 /* TripStory.app */;
@@ -513,6 +516,7 @@
 			packageReferences = (
 				B3CE283525A9AAF300C5E0A9 /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */,
 				B3F8D1BA25AD4D320039D9D8 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				B32EE28625B916AA00B5473D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = B3CE279D25A8AED300C5E0A9 /* Products */;
 			projectDirPath = "";
@@ -883,6 +887,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B32EE28625B916AA00B5473D /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.1;
+			};
+		};
 		B3CE283525A9AAF300C5E0A9 /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nalexn/EnvironmentOverrides";
@@ -906,6 +918,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B3CE283525A9AAF300C5E0A9 /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */;
 			productName = EnvironmentOverrides;
+		};
+		B32EE28725B916AA00B5473D /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B32EE28625B916AA00B5473D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 		B3F8D1BB25AD4D320039D9D8 /* ViewInspector */ = {
 			isa = XCSwiftPackageProductDependency;
