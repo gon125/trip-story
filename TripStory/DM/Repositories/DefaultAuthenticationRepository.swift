@@ -22,8 +22,15 @@ struct DefaultAuthenticationRepository: AuthenticationRepository, WebRepository 
         let request: AnyPublisher<String, Error> = call(endpoint: API.getToken(username: username, password: password))
 
         return request
+            .mapError { error -> AuthError in
+                switch error {
+                case APIError.httpCode(400): return AuthError.noMatchingUsername
+                case APIError.httpCode(401): return AuthError.wrongPassword
+                default: return AuthError.externalError(error.localizedDescription)
+                }
+            }
             .map { Result<String, AuthError>.success($0) }
-            .catch { _ in Just<Result<String, AuthError>>(.failure(AuthError.noMatchingUsername))}
+            .catch { error in Just<Result<String, AuthError>>(.failure(error)) }
             .eraseToAnyPublisher()
     }
 }
