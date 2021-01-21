@@ -17,7 +17,7 @@ extension Font {
     public static let navigationBarTitle = custom(nanumSquareBold, size: 26.0)
     public static let textInputTitle = custom(nanumSquareLight, size: 20.0)
     public static let regularText = custom(nanumSquareRegular, size: 15.0)
-    public static let textInputDescription = custom(nanumSquareLight, size: 10.0)
+    public static let textInputDescription = custom(nanumSquareLight, size: 12.0)
 }
 
 extension Font {
