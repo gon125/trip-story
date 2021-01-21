@@ -9,7 +9,10 @@ import SwiftUI
 import Combine
 
 struct LoginView: View {
+    @Environment(\.injected) private var injected: DIContainer
     @ObservedObject private(set) var viewModel: ViewModel
+    @State private(set) var loginFailed = false
+    @State private(set) var failedMessage = ""
 
     var body: some View {
         ZStack {
@@ -56,6 +59,14 @@ struct LoginView: View {
         }
         .navigationTitle("Log In")
         .navigationBarTitleDisplayMode(.inline)
+        .alert(isPresented: $loginFailed, content: {Alert(title: Text(failedMessage))})
+        .onReceive(loginStateUpdate) { loginState in
+            switch loginState {
+            case let .failed(error): loginFailed = true
+                failedMessage = error.description
+            default: loginFailed = false
+            }
+        }
     }
 
 }
@@ -99,6 +110,12 @@ extension LoginView {
         func login() {
             interactor.login(username: username, password: password)
         }
+    }
+}
+
+private extension LoginView {
+    var loginStateUpdate: AnyPublisher<LoginState, Never> {
+        injected.appState.updates(for: \.loginState)
     }
 }
 

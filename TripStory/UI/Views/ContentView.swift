@@ -14,8 +14,6 @@ struct ContentView: View {
     @Environment(\.injected) private var injected: DIContainer
     private let isRunningTests: Bool
     @State private(set) var loginState: LoginState = .notRequested
-    @State private(set) var loginFailed = false
-    @State private(set) var failedMessage = ""
 
     init(isRunningTests: Bool = ProcessInfo.processInfo.isRunningTests) {
         self.isRunningTests = isRunningTests
@@ -28,13 +26,7 @@ struct ContentView: View {
             } else {
                 ZStack {
                     self.content
-                        .onReceive(loginStateUpdate) { self.loginState = $0
-                            switch loginState {
-                            case let .failed(authError): loginFailed = true
-                                failedMessage = authError.description
-                            default: loginFailed = false
-                            }
-                        }
+                        .onReceive(loginStateUpdate) { self.loginState = $0 }
                         .attachEnvironmentOverrides()
                     // self.popup
                 }
@@ -54,7 +46,7 @@ struct ContentView: View {
     @ViewBuilder private var content: some View {
         switch loginState {
         case .success: MainView()
-        default: StartView().alert(isPresented: $loginFailed, content: {Alert(title: Text(failedMessage))})
+        default: StartView()
         }
     }
 
