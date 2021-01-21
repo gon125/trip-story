@@ -29,6 +29,7 @@
 		B3283FEC25AC388600392CCA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FEB25AC388600392CCA /* LoginView.swift */; };
 		B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FF525AC394E00392CCA /* SignUpView.swift */; };
 		B32EE28825B916AA00B5473D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B32EE28725B916AA00B5473D /* KeychainAccess */; };
+		B32EE28C25B9464000B5473D /* LogoutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE28B25B9464000B5473D /* LogoutInteractor.swift */; };
 		B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20225AC4F830095C52F /* NavigationBarModifier.swift */; };
 		B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20925AC7C2B0095C52F /* Fonts.swift */; };
 		B365C22D25AC8B170095C52F /* NanumSquareExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */; };
@@ -89,6 +90,7 @@
 		B3283FE725AC2DD100392CCA /* PushNotificationsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsHandler.swift; sourceTree = "<group>"; };
 		B3283FEB25AC388600392CCA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B3283FF525AC394E00392CCA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B32EE28B25B9464000B5473D /* LogoutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutInteractor.swift; sourceTree = "<group>"; };
 		B365C20225AC4F830095C52F /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		B365C20925AC7C2B0095C52F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareExtraBold.ttf; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 			children = (
 				B376643F25B4092200FE6A08 /* LoginInteractor.swift */,
 				B376644325B40B7B00FE6A08 /* SignupInteractor.swift */,
+				B32EE28B25B9464000B5473D /* LogoutInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				B3BFB35125B18165007F0B9D /* LoadingButtonView.swift in Sources */,
 				B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationService.swift in Sources */,
+				B32EE28C25B9464000B5473D /* LogoutInteractor.swift in Sources */,
 				B3247D7425AA3A9C0002A7EA /* Colors.swift in Sources */,
 				B3247D5025AA0C130002A7EA /* MainView.swift in Sources */,
 				B3283FDE25ABF9FD00392CCA /* SystemEventsHandler.swift in Sources */,
