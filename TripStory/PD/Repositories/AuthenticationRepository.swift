@@ -7,6 +7,6 @@
 import Combine
 
 protocol AuthenticationRepository {
-    func getToken() -> AnyPublisher<String, Error>
+    func getToken() -> AnyPublisher<String?, Never>
     func getToken(with username: String, password: String) -> AnyPublisher<Result<String, AuthError>, Never>
 }
