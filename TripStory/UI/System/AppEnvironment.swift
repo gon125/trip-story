@@ -39,15 +39,23 @@ extension AppEnvironment {
         appState: Store<AppState>,
         services: DIContainer.Services
     ) -> DIContainer.Interactors {
+
         let signupInteractor = DefaultSignupInteractor()
+
         let loginInteractor = DefaultLoginInteractor(
+            appState: appState,
+            authService: services.authenticationService
+        )
+
+        let logoutInteractor = DefaultLogoutInteractor(
             appState: appState,
             authService: services.authenticationService
         )
 
         return .init(
             signupInteractor: signupInteractor,
-            loginInteractor: loginInteractor
+            loginInteractor: loginInteractor,
+            logoutInteractor: logoutInteractor
         )
     }
 
