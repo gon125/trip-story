@@ -10,15 +10,17 @@ import Combine
 import KeychainAccess
 
 struct DefaultAuthenticationRepository: AuthenticationRepository, WebRepository {
-    let keychain = Keychain(service: "io.github.gon125.ios.TripStory")
+
+    private let keychain = Keychain(service: "io.github.gon125.ios.TripStory")
+    private let keychainKey = "token"
     var session: URLSession
     var baseURL: String
     func getToken() -> AnyPublisher<String?, Never> {
-        Just(keychain["token"])
+        Just(keychain[keychainKey])
             .eraseToAnyPublisher()
     }
 
-    func getToken(with username: String, password: String) -> AnyPublisher<Result<String, AuthError>, Never> {
+    func createToken(with username: String, password: String) -> AnyPublisher<Result<String, AuthError>, Never> {
         let request: AnyPublisher<String, Error> = call(endpoint: API.getToken(username: username, password: password))
 
         return request
@@ -30,11 +32,21 @@ struct DefaultAuthenticationRepository: AuthenticationRepository, WebRepository 
                 }
             }
             .map {
-                keychain["token"] = $0
+                keychain[keychainKey] = $0
                 return Result<String, AuthError>.success($0)
             }
             .catch { error in Just<Result<String, AuthError>>(.failure(error)) }
             .eraseToAnyPublisher()
+    }
+
+    func deleteToken() -> AnyPublisher<Bool, Never> {
+        Just(())
+            .map {
+                keychain[keychainKey] = nil
+                return true
+            }
+            .eraseToAnyPublisher()
+
     }
 }
 
