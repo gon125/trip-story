@@ -8,11 +8,10 @@
 protocol CustomState: Equatable { }
 
 enum LoginState: CustomState {
-
     case notRequested
     case isInProgress
     case success
-    case failed(AuthError)
+    case failed(LoginError)
 }
 
 enum SignupState: CustomState {
