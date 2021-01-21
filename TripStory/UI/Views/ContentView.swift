@@ -28,7 +28,6 @@ struct ContentView: View {
                     self.content
                         .onReceive(loginStateUpdate) { self.loginState = $0 }
                         .attachEnvironmentOverrides()
-                    // self.popup
                 }
 
             }
@@ -57,10 +56,6 @@ private extension ContentView {
     var loginStateUpdate: AnyPublisher<LoginState, Never> {
         injected.appState.updates(for: \.loginState)
     }
-
-//    var notRequesetedView: some View {
-//        Login
-//    }
 }
 
 #if DEBUG
