@@ -10,6 +10,7 @@ protocol CustomError: Error, Equatable, CustomStringConvertible { }
 enum LoginError: CustomError {
     case invalidUsername
     case invalidPassword
+    case externalError(String)
 }
 
 enum SignupError: CustomError {
@@ -32,6 +33,7 @@ enum SignupError: CustomError {
 enum AuthError: CustomError {
     case noMatchingUsername
     case wrongPassword
+    case externalError(String)
 }
 
 extension AuthError {
@@ -39,6 +41,7 @@ extension AuthError {
         switch self {
         case .noMatchingUsername: return "There is no matching Username"
         case .wrongPassword: return "Wrong Password"
+        case let .externalError(errorDescription): return errorDescription
         }
     }
 }
@@ -48,6 +51,7 @@ extension LoginError {
         switch self {
         case .invalidUsername: return "Invalid Username"
         case .invalidPassword: return "Invalid Password"
+        case let .externalError(errorDescription): return errorDescription
         }
     }
 }
