@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct MainView: View {
+    @Environment(\.injected) private var injected: DIContainer
     var body: some View {
         ZStack {
             Color.major.ignoresSafeArea()
-            Text("Main")
+            VStack {
+                Text("Main")
+                Button(
+                    action: { injected.interactors.logoutInteractor.logout() },
+                    label: { Text("Logout") }
+                )
+            }
         }
     }
 }
