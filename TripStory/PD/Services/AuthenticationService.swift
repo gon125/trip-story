@@ -9,6 +9,7 @@ import Combine
 protocol AuthenticationService {
     func login(username: String, password: String) -> AnyPublisher<LoginState, Never>
     func signup(username: String, password: String) -> AnyPublisher<SignupState, Never>
+    func isUserLoggedIn() -> AnyPublisher<Bool, Never>
 }
 
 struct DefaultAuthenticationService: AuthenticationService {
@@ -30,10 +31,23 @@ struct DefaultAuthenticationService: AuthenticationService {
         Just(SignupState.failed(.invalidPassword(.empty))).eraseToAnyPublisher()
     }
 
+    func isUserLoggedIn() -> AnyPublisher<Bool, Never> {
+        repository.getToken()
+            .map { token in
+                token == nil ? false : true
+            }
+            .eraseToAnyPublisher()
+    }
+
  }
 
  #if DEBUG
  struct StubAuthenticationService: AuthenticationService {
+    func isUserLoggedIn() -> AnyPublisher<Bool, Never> {
+        Just(false)
+            .eraseToAnyPublisher()
+    }
+
     func login(username: String, password: String) -> AnyPublisher<LoginState, Never> {
         Just(LoginState.failed(.externalError("test"))).eraseToAnyPublisher()
     }
