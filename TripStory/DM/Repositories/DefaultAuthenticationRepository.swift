@@ -7,15 +7,15 @@
 
 import Foundation
 import Combine
+import KeychainAccess
 
 struct DefaultAuthenticationRepository: AuthenticationRepository, WebRepository {
+    let keychain = Keychain(service: "io.github.gon125.ios.TripStory")
     var session: URLSession
     var baseURL: String
-    func getToken() -> AnyPublisher<String, Error> {
-        Future { promise in
-            promise(.success(""))
-        }
-        .eraseToAnyPublisher()
+    func getToken() -> AnyPublisher<String?, Never> {
+        Just(keychain["token"])
+            .eraseToAnyPublisher()
     }
 
     func getToken(with username: String, password: String) -> AnyPublisher<Result<String, AuthError>, Never> {
@@ -29,7 +29,10 @@ struct DefaultAuthenticationRepository: AuthenticationRepository, WebRepository 
                 default: return AuthError.externalError(error.localizedDescription)
                 }
             }
-            .map { Result<String, AuthError>.success($0) }
+            .map {
+                keychain["token"] = $0
+                return Result<String, AuthError>.success($0)
+            }
             .catch { error in Just<Result<String, AuthError>>(.failure(error)) }
             .eraseToAnyPublisher()
     }
