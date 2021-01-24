@@ -44,7 +44,7 @@ struct ContentView: View {
 
     @ViewBuilder private var content: some View {
         switch loginState {
-        case .success: MainView()
+        case .success: MainView(viewModel: .init())
         default: StartView()
         }
     }
