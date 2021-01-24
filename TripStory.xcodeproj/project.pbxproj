@@ -30,6 +30,11 @@
 		B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FF525AC394E00392CCA /* SignUpView.swift */; };
 		B32EE28825B916AA00B5473D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B32EE28725B916AA00B5473D /* KeychainAccess */; };
 		B32EE28C25B9464000B5473D /* LogoutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE28B25B9464000B5473D /* LogoutInteractor.swift */; };
+		B32EE29125B957EE00B5473D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE29025B957EE00B5473D /* HomeView.swift */; };
+		B32EE29525B957FF00B5473D /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE29425B957FF00B5473D /* ScheduleView.swift */; };
+		B32EE29925B9581000B5473D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE29825B9581000B5473D /* MapView.swift */; };
+		B32EE29D25B9582000B5473D /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE29C25B9582000B5473D /* MessageView.swift */; };
+		B32EE2A125B9583100B5473D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE2A025B9583100B5473D /* SettingsView.swift */; };
 		B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20225AC4F830095C52F /* NavigationBarModifier.swift */; };
 		B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20925AC7C2B0095C52F /* Fonts.swift */; };
 		B365C22D25AC8B170095C52F /* NanumSquareExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */; };
@@ -91,6 +96,11 @@
 		B3283FEB25AC388600392CCA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B3283FF525AC394E00392CCA /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B32EE28B25B9464000B5473D /* LogoutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutInteractor.swift; sourceTree = "<group>"; };
+		B32EE29025B957EE00B5473D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B32EE29425B957FF00B5473D /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		B32EE29825B9581000B5473D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B32EE29C25B9582000B5473D /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		B32EE2A025B9583100B5473D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B365C20225AC4F830095C52F /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		B365C20925AC7C2B0095C52F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareExtraBold.ttf; sourceTree = "<group>"; };
@@ -227,6 +237,7 @@
 		B3283FF125AC38E100392CCA /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				B32EE28F25B957CE00B5473D /* TabbedViews */,
 				B3247D4F25AA0C130002A7EA /* MainView.swift */,
 			);
 			path = MainView;
@@ -247,6 +258,18 @@
 				B3283FF525AC394E00392CCA /* SignUpView.swift */,
 			);
 			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		B32EE28F25B957CE00B5473D /* TabbedViews */ = {
+			isa = PBXGroup;
+			children = (
+				B32EE29025B957EE00B5473D /* HomeView.swift */,
+				B32EE29425B957FF00B5473D /* ScheduleView.swift */,
+				B32EE29825B9581000B5473D /* MapView.swift */,
+				B32EE29C25B9582000B5473D /* MessageView.swift */,
+				B32EE2A025B9583100B5473D /* SettingsView.swift */,
+			);
+			path = TabbedViews;
 			sourceTree = "<group>";
 		};
 		B365C20125AC4F5E0095C52F /* ViewModifiers */ = {
@@ -593,25 +616,30 @@
 				B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */,
 				B376644025B4092200FE6A08 /* LoginInteractor.swift in Sources */,
 				B37DAC2F25AD5C2E007855E6 /* StyleGuides.swift in Sources */,
+				B32EE29125B957EE00B5473D /* HomeView.swift in Sources */,
 				B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */,
 				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
 				B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */,
 				B300010725B8060F001C46F7 /* WebRepository.swift in Sources */,
 				B306CC5725AEB094007D99AD /* AuthenticationRepository.swift in Sources */,
+				B32EE29925B9581000B5473D /* MapView.swift in Sources */,
 				B300010B25B80663001C46F7 /* APICall.swift in Sources */,
 				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
+				B32EE29D25B9582000B5473D /* MessageView.swift in Sources */,
 				B376644425B40B7B00FE6A08 /* SignupInteractor.swift in Sources */,
 				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
 				B306CC7225B03058007D99AD /* Helpers.swift in Sources */,
 				B300010F25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift in Sources */,
 				B3BFB35125B18165007F0B9D /* LoadingButtonView.swift in Sources */,
 				B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */,
+				B32EE2A125B9583100B5473D /* SettingsView.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationService.swift in Sources */,
 				B32EE28C25B9464000B5473D /* LogoutInteractor.swift in Sources */,
 				B3247D7425AA3A9C0002A7EA /* Colors.swift in Sources */,
 				B3247D5025AA0C130002A7EA /* MainView.swift in Sources */,
 				B3283FDE25ABF9FD00392CCA /* SystemEventsHandler.swift in Sources */,
 				B37DAC3325AD792A007855E6 /* TextFieldModifiers.swift in Sources */,
+				B32EE29525B957FF00B5473D /* ScheduleView.swift in Sources */,
 				B37DAC3D25AD886B007855E6 /* Errors.swift in Sources */,
 				B3CE27F925A946EC00C5E0A9 /* AppState.swift in Sources */,
 				B376644C25B4134B00FE6A08 /* States.swift in Sources */,
