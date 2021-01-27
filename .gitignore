@@ -133,7 +133,7 @@ Hamew.beaver
 .build/
 
 ## CocoaPods
-# Pods/
+Pods/
 
 ## Carthage
 Carthage/Checkouts
