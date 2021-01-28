@@ -59,7 +59,15 @@ struct LoginView: View {
         }
         .navigationTitle("Log In")
         .navigationBarTitleDisplayMode(.inline)
-        .alert(isPresented: $loginFailed, content: {Alert(title: Text(failedMessage))})
+        .alert(isPresented: $loginFailed) {
+            Alert(
+                title: Text(failedMessage),
+                dismissButton: .default(
+                    Text("Confirm"),
+                    action: { resetLoginState() }
+                )
+            )
+        }
         .onReceive(loginStateUpdate) { loginState in
             switch loginState {
             case let .failed(error): loginFailed = true
@@ -69,6 +77,12 @@ struct LoginView: View {
         }
     }
 
+}
+
+extension LoginView {
+    func resetLoginState() {
+        self.injected.appState[\.loginState] = .notRequested
+    }
 }
 
 extension LoginView {
@@ -104,7 +118,6 @@ extension LoginView {
             appState.updates(for: \.loginState)
                 .map { $0 == .isInProgress}
                 .assign(to: &$isLoading)
-
         }
 
         func login() {
