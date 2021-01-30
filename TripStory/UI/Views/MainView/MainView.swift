@@ -8,66 +8,86 @@
 import SwiftUI
 
 struct MainView: View {
-    @Environment(\.injected) private var injected: DIContainer
-    @ObservedObject private(set) var viewModel: ViewModel
+    @State private var selection: Tab = .home
 
     var body: some View {
-        TabView(selection: $viewModel.selectedTab) {
-            ForEach(Tab.allCases) { tab in
-                tab.body
-                    .tabItem {
-                        TabbarItem(
-                            id: tab.id,
-                            title: tab.title,
-                            image: tab.image,
-                            selectedTab: $viewModel.selectedTab
-                        )
-                    }
+        ZStack(alignment: .bottom) {
+            TabView(selection: $selection) {
+                selection.body()
+                    .background(Color.red)
             }
+            .onAppear { UITabBar.appearance().isHidden = true }
+
+            Color.white
+                .frame(height: 70)
+                .cornerRadius(30, corners: [.topLeft, .topRight])
+
+            HStack(spacing: .horizontalPadding) {
+                ForEach(Tab.allCases) { tab in
+                    tab.tabbarItem(selection: $selection)
+                }
+            }
+            .frame(height: 70)
         }
     }
+
 }
 
 extension MainView {
+
     struct TabbarItem: View {
         let id: Int
         let title: LocalizedStringKey
         let image: String
-        @Binding var selectedTab: Int
+        @Binding var selectedTab: Tab
+        var isSelected: Bool {
+            selectedTab.rawValue == id
+        }
 
         var body: some View {
-            VStack {
-                Image(systemName: image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .imageScale(.large)
-                if selectedTab != id {
-                    Text(title)
+            Button(
+                action: { selectedTab = Tab(rawValue: id)! },
+                label: {
+                    VStack(alignment: .center, spacing: 3) {
+                        if isSelected {
+                            Image(systemName: image)
+                                .font(.largeTitle)
+                                .padding()
+                                .background(Color.major)
+                                .foregroundColor(.white)
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.white, lineWidth: 3))
+                        } else {
+                            Image(systemName: image)
+                            Text(title)
+                                .font(.tabbarText)
+                        }
+                    }
+                    .foregroundColor(.major)
+                    .offset(y: isSelected ? -15 : 0)
                 }
-            }
+            )
         }
     }
-}
 
-extension MainView {
-    class ViewModel: ObservableObject {
-        @Published var selectedTab = 0
-    }
-}
-
-private extension MainView {
     enum Tab: Int, CaseIterable, Identifiable {
         var id: Int { self.rawValue }
         case home, schedule, map, message, settings
 
-        var body: some View {
+        @ViewBuilder
+        func body() -> some View {
             switch self {
-            case .home: return AnyView(HomeView())
-            case .schedule: return AnyView(ScheduleView())
-            case .map: return AnyView(MapView())
-            case .message: return AnyView(MessageView())
-            case .settings: return AnyView(SettingsView())
+            case .home: HomeView()
+            case .schedule: ScheduleView()
+            case .map: MapView()
+            case .message: MessageView()
+            case .settings: SettingsView()
             }
+        }
+
+        @ViewBuilder
+        func tabbarItem(selection: Binding<Tab>) -> some View {
+            TabbarItem(id: id, title: title, image: image, selectedTab: selection)
         }
 
         var title: LocalizedStringKey {
@@ -94,6 +114,6 @@ private extension MainView {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: .init())
+        MainView()
     }
 }
