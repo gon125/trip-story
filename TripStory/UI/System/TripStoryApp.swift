@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 import EnvironmentOverrides
+import Firebase
 
 typealias NotificationPayload = [AnyHashable: Any]
 typealias FetchCompletion = (UIBackgroundFetchResult) -> Void
@@ -25,6 +26,7 @@ struct TripStoryApp: App {
     var systemEventsHandler: SystemEventsHandler?
 
     init() {
+        FirebaseApp.configure()
         environment = AppEnvironment.bootstrap()
         systemEventsHandler = environment.systemEventsHandler
     }
