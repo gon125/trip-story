@@ -27,7 +27,7 @@ struct ContentView: View {
                 ZStack {
                     self.content
                         .onReceive(loginStateUpdate) { self.loginState = $0 }
-                        .attachEnvironmentOverrides()
+                        // .attachEnvironmentOverrides()
                 }
 
             }
@@ -44,7 +44,7 @@ struct ContentView: View {
 
     @ViewBuilder private var content: some View {
         switch loginState {
-        case .success: MainView(viewModel: .init())
+        case .success: MainView()
         default: StartView()
         }
     }
