@@ -1,5 +1,8 @@
 
 
+"Confirm" = "Confirm";
+
+
 "Enter a password." = "Enter a password.";
 
 
@@ -36,6 +39,9 @@
 "Password Again" = "Password Again";
 
 
+"Please verify your email address before logging in." = "Please verify your email address before logging in.";
+
+
 "Schedule" = "Schedule";
 
 
@@ -48,7 +54,19 @@
 "Sign Up" = "Sign Up";
 
 
+"The email address is badly formatted." = "The email address is badly formatted.";
+
+
+"The password is invalid or the user does not have a password." = "The password is invalid or the user does not have a password.";
+
+
+"The password must be 6 characters long or more." = "The password must be 6 characters long or more.";
+
+
 "There is no matching Username" = "There is no matching Username";
+
+
+"There is no user record corresponding to this identifier. The user may have been deleted." = "There is no user with the username.";
 
 
 "Those passwords didin't match. Try again." = "Those passwords didin't match. Try again.";

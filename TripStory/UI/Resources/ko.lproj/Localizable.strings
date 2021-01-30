@@ -1,5 +1,8 @@
 
 
+"Confirm" = "확인";
+
+
 "Enter a password." = "비밀번호를 입력하세요.";
 
 
@@ -36,6 +39,9 @@
 "Password Again" = "비밀번호 재입력";
 
 
+"Please verify your email address before logging in." = "이메일 인증을 마친 후 로그인을 진행해주세요.";
+
+
 "Schedule" = "일정";
 
 
@@ -48,7 +54,19 @@
 "Sign Up" = "회원가입";
 
 
+"The email address is badly formatted." = "이메일 주소가 올바르지 않습니다.";
+
+
+"The password is invalid or the user does not have a password." = "올바른 비밀번호를 입력하세요.";
+
+
+"The password must be 6 characters long or more." = "비밀번호를 6자리 이상으로 입력하세요.";
+
+
 "There is no matching Username" = "일치하는 아이디가 존재하지 않습니다";
+
+
+"There is no user record corresponding to this identifier. The user may have been deleted." = "일치하는 아이디가 존재하지 않습니다.";
 
 
 "Those passwords didin't match. Try again." = "두 비밀번호가 일치하지 않습니다.";
