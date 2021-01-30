@@ -40,7 +40,9 @@ extension AppEnvironment {
         services: DIContainer.Services
     ) -> DIContainer.Interactors {
 
-        let signupInteractor = DefaultSignupInteractor()
+        let signupInteractor = DefaultSignupInteractor(
+            service: services.authenticationService
+        )
 
         let loginInteractor = DefaultLoginInteractor(
             appState: appState,
@@ -60,7 +62,8 @@ extension AppEnvironment {
     }
 
     private static func configuredServices(repositories: DIContainer.Repositories) -> DIContainer.Services {
-        let authenticationService = DefaultAuthenticationService(repository: repositories.authenticationRepository)
+        let authenticationService = FirebaseAuthenticationService()
+            // DefaultAuthenticationService(repository: repositories.authenticationRepository)
         return .init(authenticationService: authenticationService)
     }
 
