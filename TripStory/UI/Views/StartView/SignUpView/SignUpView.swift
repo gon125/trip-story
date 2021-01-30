@@ -9,7 +9,9 @@ import SwiftUI
 import Combine
 
 struct SignUpView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject private(set) var viewModel: ViewModel
+    @State private var isAlertPresented = false
 
     var body: some View {
         ZStack {
@@ -49,8 +51,37 @@ struct SignUpView: View {
         }
         .navigationTitle("Sign Up")
         .navigationBarTitleDisplayMode(.inline)
+        .alert(isPresented: $isAlertPresented) {
+            Alert(
+                title: Text(viewModel.alertMessage),
+                dismissButton: .default(Text("Confirm"), action: { resetSignupState() })
+            )
+        }
+        .onReceive(viewModel.signupState, perform: { state in
+            switch state {
+            case let .failed(error):
+                viewModel.alertMessage = LocalizedStringKey(error.description)
+                isAlertPresented = true
+            case .success:
+                viewModel.alertMessage = LocalizedStringKey("Please verify your email address before logging in.")
+                isAlertPresented = true
+            default: isAlertPresented = false
+            }
+        })
     }
 
+}
+
+extension SignUpView {
+    private func resetSignupState() {
+        if viewModel.signupState.value == .success {
+            viewModel.username = ""
+            viewModel.password = ""
+            viewModel.passwordAgain = ""
+            presentationMode.wrappedValue.dismiss()
+        }
+        self.viewModel.signupState.send(.notRequested)
+    }
 }
 
 extension SignUpView {
@@ -61,10 +92,11 @@ extension SignUpView {
         @Published var usernameStateString = ""
         @Published var passwordStateString = ""
         @Published var isSignupable = false
-        private var signupState: CurrentValueSubject<SignupState, Never> = .init(.notRequested)
+        var signupState: CurrentValueSubject<SignupState, Never> = .init(.notRequested)
         @Published var isLoading = false
         @Published var isValidUsername = false
         @Published var isValidPassword = false
+        @Published var alertMessage: LocalizedStringKey = ""
         private let interactor: SignupInteractor
 
         init(interactor: SignupInteractor) {
