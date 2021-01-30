@@ -25,12 +25,17 @@ protocol SignupInteractor {
 }
 
 struct DefaultSignupInteractor: SignupInteractor {
+    let service: AuthenticationService
+    let cancelBag = CancelBag()
 
     func signup(with username: String,
                 password: String,
                 passwordAgain: String,
                 signupState: CurrentValueSubject<SignupState, Never>) {
         signupState.send(.isInProgress)
+        service.signup(username: username, password: password)
+            .sink(receiveValue: { signupState.send($0) })
+            .store(in: cancelBag)
     }
 
     func validationState(for username: Published<String>.Publisher) -> AnyPublisher<UsernameState, Never> {
