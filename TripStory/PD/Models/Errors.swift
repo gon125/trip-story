@@ -15,6 +15,7 @@ enum LoginError: CustomError {
 
 enum SignupError: CustomError {
     case invalidPassword(PasswordCheck)
+    case externalError(String)
     enum PasswordCheck: Error {
         case valid
         case empty
@@ -33,6 +34,7 @@ enum SignupError: CustomError {
 enum AuthError: CustomError {
     case noMatchingUsername
     case wrongPassword
+    case authResultNil
     case externalError(String)
 }
 
@@ -41,6 +43,7 @@ extension AuthError {
         switch self {
         case .noMatchingUsername: return "There is no matching Username"
         case .wrongPassword: return "Wrong Password"
+        case .authResultNil: return "Auth Result Not Found"
         case let .externalError(errorDescription): return errorDescription
         }
     }
@@ -60,6 +63,7 @@ extension SignupError {
     var description: String {
         switch self {
         case let .invalidPassword(passwordCheck): return passwordCheck.description
+        case let .externalError(errorDescription): return errorDescription
         }
     }
 }
