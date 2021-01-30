@@ -5,6 +5,7 @@
 //  Created by Gon on 2021/01/09.
 //
 import Combine
+import Firebase
 
 protocol AuthenticationService {
     func login(username: String, password: String) -> AnyPublisher<LoginState, Never>
@@ -45,7 +46,74 @@ struct DefaultAuthenticationService: AuthenticationService {
             .eraseToAnyPublisher()
     }
 
- }
+}
+
+struct FirebaseAuthenticationService: AuthenticationService {
+    func login(username: String, password: String) -> AnyPublisher<LoginState, Never> {
+        Future<LoginState, AuthError> { promise in
+            Auth.auth().signIn(withEmail: username, password: password) { authResult, error in
+                if let error = error {
+                    promise(.failure(AuthError.externalError(error.localizedDescription)))
+                    return
+                }
+
+                guard authResult != nil else {
+                    promise(.failure(AuthError.authResultNil))
+                    return
+                }
+                promise(.success(LoginState.success))
+            }
+        }
+        .catch { (error) -> Just<LoginState> in
+            return Just(LoginState.failed(.externalError(error.description)))
+        }
+        .eraseToAnyPublisher()
+    }
+
+    func signup(username: String, password: String) -> AnyPublisher<SignupState, Never> {
+        Future<SignupState, AuthError> { promise in
+            Auth.auth().createUser(withEmail: username, password: password) { authResult, error in
+                if let error = error {
+                    promise(.failure(.externalError(error.localizedDescription)))
+                    return
+                }
+
+                guard authResult != nil else {
+                    promise(.failure(.authResultNil))
+                    return
+                }
+                promise(.success(.success))
+            }
+        }
+        .catch { (error) -> Just<SignupState> in
+            return Just(SignupState.failed(.externalError(error.description)))
+        }
+        .eraseToAnyPublisher()
+    }
+
+    func isUserLoggedIn() -> AnyPublisher<Bool, Never> {
+        Future<Bool, Never> { promise in
+            guard Auth.auth().currentUser != nil else {
+                promise(.success(false))
+                return
+            }
+            promise(.success(true))
+        }
+        .eraseToAnyPublisher()
+    }
+
+    func logout() -> AnyPublisher<Bool, Never> {
+
+        Just(())
+            .tryMap {
+                try Auth.auth().signOut()
+                return true
+            }
+            .replaceError(with: false)
+            .eraseToAnyPublisher()
+    }
+
+}
 
  #if DEBUG
  struct StubAuthenticationService: AuthenticationService {
