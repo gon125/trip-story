@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131FF1703CFAA8851E54DA8E /* Pods_TripStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACDE4E35D41917C3A54C836 /* Pods_TripStory.framework */; };
 		B300010725B8060F001C46F7 /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300010625B8060F001C46F7 /* WebRepository.swift */; };
 		B300010B25B80663001C46F7 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300010A25B80663001C46F7 /* APICall.swift */; };
 		B300010F25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300010E25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift */; };
@@ -35,6 +36,7 @@
 		B32EE29925B9581000B5473D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE29825B9581000B5473D /* MapView.swift */; };
 		B32EE29D25B9582000B5473D /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE29C25B9582000B5473D /* MessageView.swift */; };
 		B32EE2A125B9583100B5473D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE2A025B9583100B5473D /* SettingsView.swift */; };
+		B34107E625C0E9B300885B04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B34107E525C0E9B200885B04 /* GoogleService-Info.plist */; };
 		B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20225AC4F830095C52F /* NavigationBarModifier.swift */; };
 		B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20925AC7C2B0095C52F /* Fonts.swift */; };
 		B365C22D25AC8B170095C52F /* NanumSquareExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */; };
@@ -48,6 +50,9 @@
 		B37DAC3325AD792A007855E6 /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3225AD792A007855E6 /* TextFieldModifiers.swift */; };
 		B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */; };
 		B37DAC3D25AD886B007855E6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3C25AD886B007855E6 /* Errors.swift */; };
+		B38A206125C2C8E500A64D4C /* TabbarModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A206025C2C8E500A64D4C /* TabbarModifiers.swift */; };
+		B38A206525C2FE3800A64D4C /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A206425C2FE3800A64D4C /* CustomTabView.swift */; };
+		B39ADF0A25C5972000573AB7 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39ADF0925C5972000573AB7 /* CornerRadius.swift */; };
 		B3BFB35125B18165007F0B9D /* LoadingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */; };
 		B3CE27A025A8AED300C5E0A9 /* TripStoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */; };
 		B3CE27A225A8AED300C5E0A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE27A125A8AED300C5E0A9 /* ContentView.swift */; };
@@ -75,6 +80,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5ACDE4E35D41917C3A54C836 /* Pods_TripStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		721993A5007FB602A042D5A4 /* Pods-TripStory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripStory.release.xcconfig"; path = "Target Support Files/Pods-TripStory/Pods-TripStory.release.xcconfig"; sourceTree = "<group>"; };
+		81C8028902E4DEC15D6C888B /* Pods-TripStory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripStory.debug.xcconfig"; path = "Target Support Files/Pods-TripStory/Pods-TripStory.debug.xcconfig"; sourceTree = "<group>"; };
 		B300010625B8060F001C46F7 /* WebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
 		B300010A25B80663001C46F7 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		B300010E25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthenticationRepository.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 		B32EE29825B9581000B5473D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		B32EE29C25B9582000B5473D /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B32EE2A025B9583100B5473D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B34107E525C0E9B200885B04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B365C20225AC4F830095C52F /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		B365C20925AC7C2B0095C52F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareExtraBold.ttf; sourceTree = "<group>"; };
@@ -114,6 +123,9 @@
 		B37DAC3225AD792A007855E6 /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 		B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifiers.swift; sourceTree = "<group>"; };
 		B37DAC3C25AD886B007855E6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		B38A206025C2C8E500A64D4C /* TabbarModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarModifiers.swift; sourceTree = "<group>"; };
+		B38A206425C2FE3800A64D4C /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		B39ADF0925C5972000573AB7 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButtonView.swift; sourceTree = "<group>"; };
 		B3CE279C25A8AED300C5E0A9 /* TripStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3CE279F25A8AED300C5E0A9 /* TripStoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStoryApp.swift; sourceTree = "<group>"; };
@@ -141,6 +153,7 @@
 			files = (
 				B32EE28825B916AA00B5473D /* KeychainAccess in Frameworks */,
 				B3247D3C25A9FE340002A7EA /* EnvironmentOverrides in Frameworks */,
+				131FF1703CFAA8851E54DA8E /* Pods_TripStory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +168,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93834E81902ACCA371FD89CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81C8028902E4DEC15D6C888B /* Pods-TripStory.debug.xcconfig */,
+				721993A5007FB602A042D5A4 /* Pods-TripStory.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B300010425B805F5001C46F7 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +213,7 @@
 		B3247D3A25A9FE340002A7EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5ACDE4E35D41917C3A54C836 /* Pods_TripStory.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,6 +223,7 @@
 			children = (
 				B3247D4B25AA08750002A7EA /* ErrorView.swift */,
 				B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */,
+				B38A206425C2FE3800A64D4C /* CustomTabView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -279,6 +303,8 @@
 				B365C20225AC4F830095C52F /* NavigationBarModifier.swift */,
 				B37DAC3225AD792A007855E6 /* TextFieldModifiers.swift */,
 				B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */,
+				B38A206025C2C8E500A64D4C /* TabbarModifiers.swift */,
+				B39ADF0925C5972000573AB7 /* CornerRadius.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -318,6 +344,7 @@
 				B3CE281925A9A89500C5E0A9 /* UnitTests */,
 				B3CE279D25A8AED300C5E0A9 /* Products */,
 				B3247D3A25A9FE340002A7EA /* Frameworks */,
+				93834E81902ACCA371FD89CB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -333,6 +360,7 @@
 		B3CE279E25A8AED300C5E0A9 /* TripStory */ = {
 			isa = PBXGroup;
 			children = (
+				B34107E525C0E9B200885B04 /* GoogleService-Info.plist */,
 				B3CE27CD25A8AEEA00C5E0A9 /* PD */,
 				B3CE27CE25A8AEF000C5E0A9 /* DM */,
 				B3CE27CF25A8AEF400C5E0A9 /* UI */,
@@ -472,10 +500,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3CE27C125A8AED700C5E0A9 /* Build configuration list for PBXNativeTarget "TripStory" */;
 			buildPhases = (
+				FA5D5861138F81C7D59D734E /* [CP] Check Pods Manifest.lock */,
 				B306CC6425B02494007D99AD /* Run Swiftlint */,
 				B3CE279825A8AED300C5E0A9 /* Sources */,
 				B3CE279925A8AED300C5E0A9 /* Frameworks */,
 				B3CE279A25A8AED300C5E0A9 /* Resources */,
+				8E0A6E2FDD3DF0FCDC4FC448 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -567,6 +597,7 @@
 				B3247D4025A9FEA70002A7EA /* Launch Screen.storyboard in Resources */,
 				B365C22D25AC8B170095C52F /* NanumSquareExtraBold.ttf in Resources */,
 				B3247D7A25AA3B1E0002A7EA /* Colors.xcassets in Resources */,
+				B34107E625C0E9B300885B04 /* GoogleService-Info.plist in Resources */,
 				B3CE27A425A8AED600C5E0A9 /* Assets.xcassets in Resources */,
 				B3247D4425AA00290002A7EA /* logo.png in Resources */,
 			);
@@ -582,6 +613,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8E0A6E2FDD3DF0FCDC4FC448 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripStory/Pods-TripStory-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripStory/Pods-TripStory-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripStory/Pods-TripStory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B306CC6425B02494007D99AD /* Run Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -599,6 +647,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint --config \"${SRCROOT}/.swiftlint.yml\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		FA5D5861138F81C7D59D734E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TripStory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -626,6 +696,7 @@
 				B300010B25B80663001C46F7 /* APICall.swift in Sources */,
 				B3247D5825AA1EDF0002A7EA /* CancelBag.swift in Sources */,
 				B32EE29D25B9582000B5473D /* MessageView.swift in Sources */,
+				B39ADF0A25C5972000573AB7 /* CornerRadius.swift in Sources */,
 				B376644425B40B7B00FE6A08 /* SignupInteractor.swift in Sources */,
 				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
 				B306CC7225B03058007D99AD /* Helpers.swift in Sources */,
@@ -634,6 +705,7 @@
 				B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */,
 				B32EE2A125B9583100B5473D /* SettingsView.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationService.swift in Sources */,
+				B38A206525C2FE3800A64D4C /* CustomTabView.swift in Sources */,
 				B32EE28C25B9464000B5473D /* LogoutInteractor.swift in Sources */,
 				B3247D7425AA3A9C0002A7EA /* Colors.swift in Sources */,
 				B3247D5025AA0C130002A7EA /* MainView.swift in Sources */,
@@ -642,6 +714,7 @@
 				B32EE29525B957FF00B5473D /* ScheduleView.swift in Sources */,
 				B37DAC3D25AD886B007855E6 /* Errors.swift in Sources */,
 				B3CE27F925A946EC00C5E0A9 /* AppState.swift in Sources */,
+				B38A206125C2C8E500A64D4C /* TabbarModifiers.swift in Sources */,
 				B376644C25B4134B00FE6A08 /* States.swift in Sources */,
 				B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */,
 				B3283FEC25AC388600392CCA /* LoginView.swift in Sources */,
@@ -804,6 +877,7 @@
 		};
 		B3CE27C225A8AED700C5E0A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81C8028902E4DEC15D6C888B /* Pods-TripStory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -826,6 +900,7 @@
 		};
 		B3CE27C325A8AED700C5E0A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721993A5007FB602A042D5A4 /* Pods-TripStory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
