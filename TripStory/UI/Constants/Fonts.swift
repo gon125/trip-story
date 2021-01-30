@@ -21,6 +21,10 @@ extension Font {
 }
 
 extension Font {
+    public static let tabbarText = custom(nanumSquareLight, size: 14.0)
+}
+
+extension Font {
     fileprivate static let nanumSquareExtraBold = "NanumSquareEB"
     fileprivate static let nanumSquareLight = "NanumSquareL"
     fileprivate static let nanumSquareRegular = "NanumSquareR"
