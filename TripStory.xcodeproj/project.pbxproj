@@ -37,6 +37,10 @@
 		B32EE29D25B9582000B5473D /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE29C25B9582000B5473D /* MessageView.swift */; };
 		B32EE2A125B9583100B5473D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE2A025B9583100B5473D /* SettingsView.swift */; };
 		B34107E625C0E9B300885B04 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B34107E525C0E9B200885B04 /* GoogleService-Info.plist */; };
+		B34E4DA725C5B1AD00D58CA7 /* ImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E4DA625C5B1AD00D58CA7 /* ImageInteractor.swift */; };
+		B34E4DAB25C5B42500D58CA7 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E4DAA25C5B42500D58CA7 /* ImageRepository.swift */; };
+		B34E4DBF25C61A5C00D58CA7 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E4DBE25C61A5C00D58CA7 /* Loadable.swift */; };
+		B34E4DD125C625C000D58CA7 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E4DD025C625C000D58CA7 /* ImageView.swift */; };
 		B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20225AC4F830095C52F /* NavigationBarModifier.swift */; };
 		B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365C20925AC7C2B0095C52F /* Fonts.swift */; };
 		B365C22D25AC8B170095C52F /* NanumSquareExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */; };
@@ -50,7 +54,6 @@
 		B37DAC3325AD792A007855E6 /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3225AD792A007855E6 /* TextFieldModifiers.swift */; };
 		B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */; };
 		B37DAC3D25AD886B007855E6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37DAC3C25AD886B007855E6 /* Errors.swift */; };
-		B38A206125C2C8E500A64D4C /* TabbarModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A206025C2C8E500A64D4C /* TabbarModifiers.swift */; };
 		B38A206525C2FE3800A64D4C /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A206425C2FE3800A64D4C /* CustomTabView.swift */; };
 		B39ADF0A25C5972000573AB7 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39ADF0925C5972000573AB7 /* CornerRadius.swift */; };
 		B3BFB35125B18165007F0B9D /* LoadingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */; };
@@ -110,6 +113,10 @@
 		B32EE29C25B9582000B5473D /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B32EE2A025B9583100B5473D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B34107E525C0E9B200885B04 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B34E4DA625C5B1AD00D58CA7 /* ImageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInteractor.swift; sourceTree = "<group>"; };
+		B34E4DAA25C5B42500D58CA7 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		B34E4DBE25C61A5C00D58CA7 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		B34E4DD025C625C000D58CA7 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		B365C20225AC4F830095C52F /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		B365C20925AC7C2B0095C52F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		B365C22925AC8B160095C52F /* NanumSquareExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareExtraBold.ttf; sourceTree = "<group>"; };
@@ -123,7 +130,6 @@
 		B37DAC3225AD792A007855E6 /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 		B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifiers.swift; sourceTree = "<group>"; };
 		B37DAC3C25AD886B007855E6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		B38A206025C2C8E500A64D4C /* TabbarModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarModifiers.swift; sourceTree = "<group>"; };
 		B38A206425C2FE3800A64D4C /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		B39ADF0925C5972000573AB7 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButtonView.swift; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				B306CC5625AEB094007D99AD /* AuthenticationRepository.swift */,
+				B34E4DAA25C5B42500D58CA7 /* ImageRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -224,6 +231,7 @@
 				B3247D4B25AA08750002A7EA /* ErrorView.swift */,
 				B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */,
 				B38A206425C2FE3800A64D4C /* CustomTabView.swift */,
+				B34E4DD025C625C000D58CA7 /* ImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -303,7 +311,6 @@
 				B365C20225AC4F830095C52F /* NavigationBarModifier.swift */,
 				B37DAC3225AD792A007855E6 /* TextFieldModifiers.swift */,
 				B37DAC3625AD81A0007855E6 /* ButtonModifiers.swift */,
-				B38A206025C2C8E500A64D4C /* TabbarModifiers.swift */,
 				B39ADF0925C5972000573AB7 /* CornerRadius.swift */,
 			);
 			path = ViewModifiers;
@@ -479,6 +486,7 @@
 			children = (
 				B3CE283D25A9BE5700C5E0A9 /* Store.swift */,
 				B3247D5725AA1EDF0002A7EA /* CancelBag.swift */,
+				B34E4DBE25C61A5C00D58CA7 /* Loadable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -489,6 +497,7 @@
 				B376643F25B4092200FE6A08 /* LoginInteractor.swift */,
 				B376644325B40B7B00FE6A08 /* SignupInteractor.swift */,
 				B32EE28B25B9464000B5473D /* LogoutInteractor.swift */,
+				B34E4DA625C5B1AD00D58CA7 /* ImageInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -677,16 +686,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B34E4DA725C5B1AD00D58CA7 /* ImageInteractor.swift in Sources */,
 				B3CE284925A9CB8600C5E0A9 /* AppEnvironment.swift in Sources */,
 				B3283FE825AC2DD100392CCA /* PushNotificationsHandler.swift in Sources */,
 				B3CE283E25A9BE5700C5E0A9 /* Store.swift in Sources */,
 				B3247D5425AA17070002A7EA /* StartView.swift in Sources */,
 				B3CE27FE25A9474F00C5E0A9 /* DependencyInjector.swift in Sources */,
 				B3247D4C25AA08750002A7EA /* ErrorView.swift in Sources */,
+				B34E4DAB25C5B42500D58CA7 /* ImageRepository.swift in Sources */,
 				B365C20A25AC7C2B0095C52F /* Fonts.swift in Sources */,
 				B376644025B4092200FE6A08 /* LoginInteractor.swift in Sources */,
 				B37DAC2F25AD5C2E007855E6 /* StyleGuides.swift in Sources */,
 				B32EE29125B957EE00B5473D /* HomeView.swift in Sources */,
+				B34E4DD125C625C000D58CA7 /* ImageView.swift in Sources */,
 				B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */,
 				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
 				B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */,
@@ -704,6 +716,7 @@
 				B3BFB35125B18165007F0B9D /* LoadingButtonView.swift in Sources */,
 				B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */,
 				B32EE2A125B9583100B5473D /* SettingsView.swift in Sources */,
+				B34E4DBF25C61A5C00D58CA7 /* Loadable.swift in Sources */,
 				B3CE284D25A9D09700C5E0A9 /* AuthenticationService.swift in Sources */,
 				B38A206525C2FE3800A64D4C /* CustomTabView.swift in Sources */,
 				B32EE28C25B9464000B5473D /* LogoutInteractor.swift in Sources */,
@@ -714,7 +727,6 @@
 				B32EE29525B957FF00B5473D /* ScheduleView.swift in Sources */,
 				B37DAC3D25AD886B007855E6 /* Errors.swift in Sources */,
 				B3CE27F925A946EC00C5E0A9 /* AppState.swift in Sources */,
-				B38A206125C2C8E500A64D4C /* TabbarModifiers.swift in Sources */,
 				B376644C25B4134B00FE6A08 /* States.swift in Sources */,
 				B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */,
 				B3283FEC25AC388600392CCA /* LoginView.swift in Sources */,
