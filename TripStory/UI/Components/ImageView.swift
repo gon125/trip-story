@@ -10,12 +10,16 @@ import SwiftUI
 struct ImageView: View {
 
     let url: String
+    let width: CGFloat?
+    let height: CGFloat?
     @Environment(\.injected) var injected: DIContainer
     @State private var image: Loadable<UIImage>
 
-    init(url: String, image: Loadable<UIImage> = .notRequested) {
+    init(url: String, image: Loadable<UIImage> = .notRequested, width: CGFloat? = nil, height: CGFloat? = nil) {
         self.url = url
         self._image = .init(initialValue: image)
+        self.width = width
+        self.height = height
     }
 
     var body: some View {
@@ -46,8 +50,9 @@ private extension ImageView {
     func loadedView(_ image: UIImage) -> some View {
         Image(uiImage: image)
             .resizable()
-            .aspectRatio(contentMode: .fit)
+            .frame(width: width, height: height)
             .cornerRadius(10)
+
     }
 
     func failedView(_ error: Error) -> some View {
