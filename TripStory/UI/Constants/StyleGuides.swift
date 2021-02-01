@@ -20,5 +20,6 @@ extension CGFloat {
 
 // Home View Image height
 extension CGFloat {
-    public static let homeViewImageHeight: CGFloat = 200
+    public static let homeViewImageHeight: CGFloat = 170
+    public static let homeViewHorizontalPadding: CGFloat = 20
 }
