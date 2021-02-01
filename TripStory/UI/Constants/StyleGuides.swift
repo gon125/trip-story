@@ -17,3 +17,8 @@ extension CGFloat {
     public static let buttonCornerRadius: CGFloat = 10
     public static let buttonMaxHeight: CGFloat = 47
 }
+
+// Home View Image height
+extension CGFloat {
+    public static let homeViewImageHeight: CGFloat = 200
+}
