@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.injected) var injected: DIContainer
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(
+           action: { injected.interactors.logoutInteractor.logout() },
+           label: { Text("Logout") }
+        )
     }
 }
 
