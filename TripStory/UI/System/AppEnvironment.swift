@@ -19,7 +19,11 @@ extension AppEnvironment {
         let session = configuredURLSession()
         let repositories = configuredRepositories(session: session)
         let services = configuredServices(repositories: repositories)
-        let interactors = configuredInteractors(appState: appState, services: services)
+        let interactors = configuredInteractors(
+            appState: appState,
+            services: services,
+            repositories: repositories
+        )
         let diContainer = DIContainer(appState: appState, interactors: interactors)
         let systemEventHandler = DefaultSystemEventHandler(container: diContainer)
 
@@ -37,7 +41,8 @@ extension AppEnvironment {
 
     private static func configuredInteractors(
         appState: Store<AppState>,
-        services: DIContainer.Services
+        services: DIContainer.Services,
+        repositories: DIContainer.Repositories
     ) -> DIContainer.Interactors {
 
         let signupInteractor = DefaultSignupInteractor(
@@ -54,10 +59,15 @@ extension AppEnvironment {
             authService: services.authenticationService
         )
 
+        let imageInteractor = DefaultImageInteractor(
+            imageRepository: repositories.imageRepository
+        )
+
         return .init(
             signupInteractor: signupInteractor,
             loginInteractor: loginInteractor,
-            logoutInteractor: logoutInteractor
+            logoutInteractor: logoutInteractor,
+            imageInteractor: imageInteractor
         )
     }
 
@@ -71,7 +81,11 @@ extension AppEnvironment {
 
         let baseURL = "http://localhost:3000"
         let authenticationRepository = DefaultAuthenticationRepository(session: session, baseURL: baseURL)
-        return .init(authenticationRepository: authenticationRepository)
+        let imageRepository = FirebaseImageRepository()
+        return .init(
+            authenticationRepository: authenticationRepository,
+            imageRepository: imageRepository
+        )
     }
 
     private static func configuredURLSession() -> URLSession {
