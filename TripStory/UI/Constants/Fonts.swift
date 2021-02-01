@@ -24,6 +24,12 @@ extension Font {
     public static let tabbarText = custom(nanumSquareLight, size: 14.0)
 }
 
+// Home View
+extension Font {
+    public static let tableCellTitle = custom(nanumSquareBold, size: 26.0)
+    public static let tableCellSubtitle = custom(nanumSquareRegular, size: 14.0)
+}
+
 extension Font {
     fileprivate static let nanumSquareExtraBold = "NanumSquareEB"
     fileprivate static let nanumSquareLight = "NanumSquareL"
