@@ -33,13 +33,15 @@ extension DIContainer {
         let signupInteractor: SignupInteractor
         let loginInteractor: LoginInteractor
         let logoutInteractor: LogoutInteractor
+        let imageInteractor: ImageInteractor
 
         #if DEBUG
         static var stub: Self {
             .init(
                 signupInteractor: StubSignupInteractor(),
                 loginInteractor: StubLoginInteractor(),
-                logoutInteractor: StubLogoutInteractor()
+                logoutInteractor: StubLogoutInteractor(),
+                imageInteractor: StubImageInteractor()
             )
         }
         #endif
@@ -61,6 +63,7 @@ extension DIContainer {
 extension DIContainer {
     struct Repositories {
         let authenticationRepository: AuthenticationRepository
+        let imageRepository: ImageRepository
     }
 }
 
