@@ -14,7 +14,6 @@ extension UINavigationController {
 
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.titleTextAttributes = [
-            .foregroundColor: UIColor.white,
             .font: UIFont.navigationBarTitle
         ]
         // remove back button text

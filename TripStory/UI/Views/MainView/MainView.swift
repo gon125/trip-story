@@ -11,24 +11,35 @@ struct MainView: View {
     @State private var selection: Tab = .home
 
     var body: some View {
-        ZStack(alignment: .bottom) {
-            TabView(selection: $selection) {
-                selection.body()
-                    .background(Color.red)
-            }
-            .onAppear { UITabBar.appearance().isHidden = true }
-
-            Color.white
-                .frame(height: 70)
-                .cornerRadius(30, corners: [.topLeft, .topRight])
-
-            HStack(spacing: .horizontalPadding) {
-                ForEach(Tab.allCases) { tab in
-                    tab.tabbarItem(selection: $selection)
+        GeometryReader { geo in
+            ZStack(alignment: .bottom) {
+                TabView(selection: $selection) {
+                    selection.body()
                 }
+                .onAppear { UITabBar.appearance().isHidden = true }
+
+                Color.white
+                    .frame(height: 30)
+
+                ZStack {
+                    Color.white
+                        .frame(height: 70)
+                        .cornerRadius(30, corners: [.topLeft, .topRight])
+
+                    HStack(spacing: .horizontalPadding) {
+                        ForEach(Tab.allCases) { tab in
+                            tab.tabbarItem(selection: $selection)
+                        }
+                    }
+                    .frame(height: 70)
+                }
+                .padding(.bottom, geo.safeAreaInsets.bottom + 5)
+
             }
-            .frame(height: 70)
         }
+        .edgesIgnoringSafeArea(.bottom)
+        .accentColor(.white)
+
     }
 
 }
