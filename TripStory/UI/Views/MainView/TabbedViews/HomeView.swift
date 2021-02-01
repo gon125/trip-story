@@ -10,11 +10,13 @@ import SwiftUI
 struct HomeView: View {
     @Environment(\.injected) private var injected: DIContainer
     let myTripPlaces: [TripPlace] = TripPlace.tripPlaces
+    @State private var sortingOrder: SortingOrder = .latest
+
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVStack {
-                    ForEach(myTripPlaces) { tripPlace in
+                    ForEach(myTripPlaces.sorted(by: sortingFunction)) { tripPlace in
                         TripPlaceCell(tripPlace: tripPlace)
                             .padding(.horizontal, .homeViewHorizontalPadding)
                     }
@@ -23,17 +25,38 @@ struct HomeView: View {
             .onAppear { UINavigationBar.appearance().tintColor = .black }
             .navigationBarTitle("My Trip Places")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading: Button(
-                action: {},
-                label: {
-                    Image(systemName: "arrow.backward")
-                }
-            ), trailing: Button(
-                action: {},
-                label: {
-                    Image(systemName: "line.horizontal.3.decrease.circle")
-                }
-            ))
+            .navigationBarItems(
+                leading:
+                    Button(
+                        action: {},
+                        label: {
+                            Image(systemName: "arrow.backward")
+                        }
+                    )
+                ,
+                trailing:
+                    Menu {
+                        Button("Latest") { self.sortingOrder = .latest }
+                        Button("Oldest") { self.sortingOrder = .oldest }
+                    } label: {
+                        Label("", systemImage: "line.horizontal.3.decrease.circle")
+                    }
+            )
+
+        }
+    }
+}
+
+extension HomeView {
+    enum SortingOrder {
+        case latest
+        case oldest
+    }
+
+    var sortingFunction: (TripPlace, TripPlace) -> Bool {
+        switch sortingOrder {
+        case .latest: return { $0.visitDate > $1.visitDate }
+        case .oldest: return { $0.visitDate < $1.visitDate }
         }
     }
 }
