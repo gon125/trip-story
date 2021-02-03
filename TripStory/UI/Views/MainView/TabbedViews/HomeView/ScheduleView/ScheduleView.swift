@@ -34,7 +34,7 @@ extension ScheduleView {
         let name: String
         let image: String
         let visitDate: Date
-
+        #if DEBUG
         static let schedules = [
             Schedule(name: "영월역", image: "young-wall.jpg", visitDate: Date(timeIntervalSince1970: 123421)),
             Schedule(name: "고씨동굴", image: "go-see-cave.jpg", visitDate: Date(timeIntervalSince1970: 12323421)),
@@ -42,6 +42,7 @@ extension ScheduleView {
             Schedule(name: "법흥사", image: "bub-hung.jpg", visitDate: Date(timeIntervalSince1970: 67123421)),
             Schedule(name: "젊은달 테마파크", image: "young-moon.jpg", visitDate: Date(timeIntervalSince1970: 112443421))
         ]
+        #endif
     }
 
     struct ScheduleCell: View {
@@ -68,6 +69,7 @@ extension ScheduleView {
                         .aspectRatio(contentMode: .fit)
                         .frame(height: .scheduleViewImageHeight - 10)
                     ImageView(url: schedule.image, height: .scheduleViewImageHeight)
+                        .cornerRadius(.buttonCornerRadius)
                 }
             }
         }
