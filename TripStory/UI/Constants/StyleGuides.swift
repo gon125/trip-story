@@ -18,8 +18,13 @@ extension CGFloat {
     public static let buttonMaxHeight: CGFloat = 47
 }
 
-// Home View Image height
+// Home View
 extension CGFloat {
     public static let homeViewImageHeight: CGFloat = 170
     public static let homeViewHorizontalPadding: CGFloat = 20
+}
+
+// Schedule View
+extension CGFloat {
+    public static let scheduleViewImageHeight: CGFloat = 110
 }

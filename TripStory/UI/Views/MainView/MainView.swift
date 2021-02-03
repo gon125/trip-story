@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MainView: View {
-    @State private var selection: Tab = .home
+    @Environment(\.injected) private var injected: DIContainer
+    @State private var selection: Routing = .home
 
     var body: some View {
         GeometryReader { geo in
@@ -39,9 +41,18 @@ struct MainView: View {
         }
         .edgesIgnoringSafeArea(.bottom)
         .accentColor(.white)
+        .onReceive(routingUpdate) { selection = $0 }
 
     }
 
+}
+
+extension MainView {
+    typealias Routing = Tab
+
+    var routingUpdate: AnyPublisher<Routing, Never> {
+        injected.appState.updates(for: \.routing.mainViewRouting)
+    }
 }
 
 extension MainView {
@@ -50,6 +61,7 @@ extension MainView {
         let id: Int
         let title: LocalizedStringKey
         let image: String
+        @Environment(\.injected) private var injected: DIContainer
         @Binding var selectedTab: Tab
         var isSelected: Bool {
             selectedTab.rawValue == id
@@ -57,7 +69,7 @@ extension MainView {
 
         var body: some View {
             Button(
-                action: { selectedTab = Tab(rawValue: id)! },
+                action: { self.injected.appState[\.routing.mainViewRouting] = Tab(rawValue: id)! },
                 label: {
                     VStack(alignment: .center, spacing: 3) {
                         if isSelected {
@@ -81,15 +93,15 @@ extension MainView {
         }
     }
 
-    enum Tab: Int, CaseIterable, Identifiable {
+    enum Tab: Int, CaseIterable, Identifiable, Equatable {
         var id: Int { self.rawValue }
         case home, schedule, map, message, settings
 
         @ViewBuilder
         func body() -> some View {
             switch self {
-            case .home: HomeView()
-            case .schedule: ScheduleView()
+            case .home, .schedule: HomeView()
+            // case : ScheduleView()
             case .map: MapView()
             case .message: MessageView()
             case .settings: SettingsView()
