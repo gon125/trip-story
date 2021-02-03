@@ -47,6 +47,7 @@
 		B365C22E25AC8B170095C52F /* NanumSquareBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22A25AC8B160095C52F /* NanumSquareBold.ttf */; };
 		B365C22F25AC8B170095C52F /* NanumSquareLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22B25AC8B170095C52F /* NanumSquareLight.ttf */; };
 		B365C23025AC8B170095C52F /* NanumSquareRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */; };
+		B36A1B2925CA320D002C6B43 /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A1B2825CA320D002C6B43 /* PlaceDetailView.swift */; };
 		B376644025B4092200FE6A08 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376643F25B4092200FE6A08 /* LoginInteractor.swift */; };
 		B376644425B40B7B00FE6A08 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376644325B40B7B00FE6A08 /* SignupInteractor.swift */; };
 		B376644C25B4134B00FE6A08 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376644B25B4134B00FE6A08 /* States.swift */; };
@@ -122,6 +123,7 @@
 		B365C22A25AC8B160095C52F /* NanumSquareBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareBold.ttf; sourceTree = "<group>"; };
 		B365C22B25AC8B170095C52F /* NanumSquareLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareLight.ttf; sourceTree = "<group>"; };
 		B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRegular.ttf; sourceTree = "<group>"; };
+		B36A1B2825CA320D002C6B43 /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		B376643F25B4092200FE6A08 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		B376644325B40B7B00FE6A08 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
 		B376644B25B4134B00FE6A08 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				B3247D4B25AA08750002A7EA /* ErrorView.swift */,
 				B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */,
 				B34E4DD025C625C000D58CA7 /* ImageView.swift */,
+				B36A1B2825CA320D002C6B43 /* PlaceDetailView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -292,8 +295,7 @@
 		B32EE28F25B957CE00B5473D /* TabbedViews */ = {
 			isa = PBXGroup;
 			children = (
-				B32EE29025B957EE00B5473D /* HomeView.swift */,
-				B32EE29425B957FF00B5473D /* ScheduleView.swift */,
+				B3B2500125C977D900E843DB /* HomeView */,
 				B32EE29825B9581000B5473D /* MapView.swift */,
 				B32EE29C25B9582000B5473D /* MessageView.swift */,
 				B32EE2A025B9583100B5473D /* SettingsView.swift */,
@@ -339,6 +341,23 @@
 				B376644B25B4134B00FE6A08 /* States.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B3B2500125C977D900E843DB /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B32EE29025B957EE00B5473D /* HomeView.swift */,
+				B3B2500225C977F900E843DB /* ScheduleView */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		B3B2500225C977F900E843DB /* ScheduleView */ = {
+			isa = PBXGroup;
+			children = (
+				B32EE29425B957FF00B5473D /* ScheduleView.swift */,
+			);
+			path = ScheduleView;
 			sourceTree = "<group>";
 		};
 		B3CE279325A8AED300C5E0A9 = {
@@ -696,6 +715,7 @@
 				B37DAC2F25AD5C2E007855E6 /* StyleGuides.swift in Sources */,
 				B32EE29125B957EE00B5473D /* HomeView.swift in Sources */,
 				B34E4DD125C625C000D58CA7 /* ImageView.swift in Sources */,
+				B36A1B2925CA320D002C6B43 /* PlaceDetailView.swift in Sources */,
 				B365C20325AC4F830095C52F /* NavigationBarModifier.swift in Sources */,
 				B3247D5C25AA28BC0002A7EA /* RootViewModifier.swift in Sources */,
 				B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */,
