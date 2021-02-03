@@ -1,6 +1,15 @@
 
 
+"Address" = "Address";
+
+
 "Confirm" = "Confirm";
+
+
+"Contact" = "Contact";
+
+
+"Description" = "Description";
 
 
 "Enter a password." = "Enter a password.";
@@ -58,6 +67,9 @@
 
 
 "Sign Up" = "Sign Up";
+
+
+"Summary" = "Summary";
 
 
 "The email address is badly formatted." = "The email address is badly formatted.";

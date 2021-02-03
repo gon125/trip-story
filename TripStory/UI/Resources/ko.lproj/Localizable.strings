@@ -1,6 +1,15 @@
 
 
+"Address" = "주소";
+
+
 "Confirm" = "확인";
+
+
+"Contact" = "전화번호";
+
+
+"Description" = "상세설명";
 
 
 "Enter a password." = "비밀번호를 입력하세요.";
@@ -58,6 +67,9 @@
 
 
 "Sign Up" = "회원가입";
+
+
+"Summary" = "한줄설명";
 
 
 "The email address is badly formatted." = "이메일 주소가 올바르지 않습니다.";
