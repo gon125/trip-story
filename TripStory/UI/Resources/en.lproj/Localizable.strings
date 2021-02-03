@@ -33,8 +33,6 @@
 "Message" = "Message";
 
 
-
-
 "My Trip Places" = "My Trip Places";
 
 
@@ -48,6 +46,9 @@
 
 
 "Schedule" = "Schedule";
+
+
+"Schedule Detail" = "Schedule Detail";
 
 
 "Setting" = "Setting";
