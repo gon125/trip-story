@@ -17,23 +17,22 @@ struct HomeView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(myTripPlaces.sorted(by: sortingFunction)) { tripPlace in
-                        TripPlaceCell(tripPlace: tripPlace)
-                            .padding(.horizontal, .homeViewHorizontalPadding)
+                        NavigationLink(
+                            destination: ScheduleView()) {
+                                TripPlaceCell(tripPlace: tripPlace)
+                                    .padding(.horizontal, .homeViewHorizontalPadding)
+                        }
+
                     }
                 }
             }
-            .onAppear { UINavigationBar.appearance().tintColor = .black }
+            .onAppear { UINavigationBar.appearance().tintColor = .black
+                injected.appState[\.routing.mainViewRouting] = .home
+            }
+            .navigationBarBackButtonHidden(true)
             .navigationBarTitle("My Trip Places")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
-                leading:
-                    Button(
-                        action: {},
-                        label: {
-                            Image(systemName: "arrow.backward")
-                        }
-                    )
-                ,
                 trailing:
                     Menu {
                         Button("Latest") { self.sortingOrder = .latest }
@@ -63,21 +62,18 @@ extension HomeView {
 
 extension HomeView {
     struct TripPlace: Identifiable {
-        var id: UUID
+        let id = UUID()
         let name: String
         let image: String
         let visitDate: Date
 
         static let tripPlaces = [
-            TripPlace(id: UUID(), name: "홍천", image: "hong-cheon.jpg", visitDate: Date()),
-            TripPlace(id: UUID(), name: "남이섬", image: "nam-e-sum.jpg", visitDate: Date()),
-            TripPlace(id: UUID(), name: "여수", image: "yeosu.jpg", visitDate: Date(timeIntervalSince1970: 100)),
-            TripPlace(id: UUID(), name: "홍천", image: "hong-cheon.jpg", visitDate: Date()),
-            TripPlace(id: UUID(), name: "남이섬", image: "nam-e-sum.jpg", visitDate: Date()),
-            TripPlace(id: UUID(), name: "여수", image: "yeosu.jpg", visitDate: Date(timeIntervalSince1970: 100)),
-            TripPlace(id: UUID(), name: "홍천", image: "hong-cheon.jpg", visitDate: Date()),
-            TripPlace(id: UUID(), name: "남이섬", image: "nam-e-sum.jpg", visitDate: Date()),
-            TripPlace(id: UUID(), name: "여수", image: "yeosu.jpg", visitDate: Date(timeIntervalSince1970: 100))
+            TripPlace(name: "홍천", image: "hong-cheon.jpg", visitDate: Date(timeIntervalSince1970: 200)),
+            TripPlace(name: "남이섬", image: "nam-e-sum.jpg", visitDate: Date(timeIntervalSince1970: 300)),
+            TripPlace(name: "여수", image: "yeosu.jpg", visitDate: Date(timeIntervalSince1970: 100)),
+            TripPlace(name: "홍천", image: "hong-cheon.jpg", visitDate: Date(timeIntervalSince1970: 250)),
+            TripPlace(name: "남이섬", image: "nam-e-sum.jpg", visitDate: Date(timeIntervalSince1970: 310)),
+            TripPlace(name: "여수", image: "yeosu.jpg", visitDate: Date(timeIntervalSince1970: 140))
         ]
 
     }
@@ -101,6 +97,7 @@ extension HomeView {
                         .font(.tableCellSubtitle)
 
                 }
+                .foregroundColor(.black)
                 ImageView(url: tripPlace.image, height: .homeViewImageHeight)
             }
         }
