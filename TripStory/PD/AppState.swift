@@ -20,6 +20,7 @@ extension AppState {
 
 extension AppState {
     struct ViewRouting: Equatable {
+        var mainViewRouting = MainView.Routing.home
     }
 }
 
