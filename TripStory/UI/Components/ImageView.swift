@@ -39,11 +39,12 @@ private extension ImageView {
         }
     }
     var loadingView: some View {
-        HStack {
+        HStack(alignment: .top) {
             Spacer()
             ProgressView()
             Spacer()
         }
+        .frame(width: width, height: height)
 
     }
 
@@ -53,7 +54,6 @@ private extension ImageView {
             .aspectRatio(contentMode: .fill)
             .frame(width: width, height: height)
             .clipped()
-            .cornerRadius(10)
 
     }
 
