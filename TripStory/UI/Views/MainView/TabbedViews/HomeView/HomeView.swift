@@ -99,6 +99,7 @@ extension HomeView {
                 }
                 .foregroundColor(.black)
                 ImageView(url: tripPlace.image, height: .homeViewImageHeight)
+                    .cornerRadius(.buttonCornerRadius)
             }
         }
     }
