@@ -50,7 +50,9 @@ private extension ImageView {
     func loadedView(_ image: UIImage) -> some View {
         Image(uiImage: image)
             .resizable()
+            .aspectRatio(contentMode: .fill)
             .frame(width: width, height: height)
+            .clipped()
             .cornerRadius(10)
 
     }
