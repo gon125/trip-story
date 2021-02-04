@@ -47,10 +47,14 @@ struct PlaceDetailView: View {
             Text(place.name)
                 .font(.tableCellTitle)
             Spacer()
-            Image(systemName: "play.fill")
-                .resizable()
-                .foregroundColor(.major)
-                .frame(width: 24, height: 24)
+            NavigationLink(
+                destination: VideoView(),
+                label: {
+                    Image(systemName: "play.fill")
+                        .resizable()
+                        .foregroundColor(.major)
+                        .frame(width: 24, height: 24)
+                })
             Spacer()
                 .frame(width: 20)
             Image(systemName: "headphones")
