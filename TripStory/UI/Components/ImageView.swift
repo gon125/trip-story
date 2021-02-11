@@ -58,12 +58,17 @@ private extension ImageView {
     }
 
     func failedView(_ error: Error) -> some View {
-        Text("")
+        Image("placeholder-image")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: width, height: height)
+            .clipped()
     }
 }
 
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView(url: "hh.jpg")
+        ImageView(url: "go-see-cave.jpg")
+            .inject(DIContainer.preview)
     }
 }

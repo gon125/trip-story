@@ -32,7 +32,7 @@ extension AppState {
 }
 
 extension AppState {
-    struct Permissions: Equatable {
+    struct Permisson: Equatable {
     }
 }
 

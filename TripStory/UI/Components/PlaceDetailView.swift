@@ -48,7 +48,7 @@ struct PlaceDetailView: View {
                 .font(.tableCellTitle)
             Spacer()
             NavigationLink(
-                destination: VideoView(),
+                destination: VideoListView(),
                 label: {
                     Image(systemName: "play.fill")
                         .resizable()
@@ -185,6 +185,8 @@ extension PlaceDetailView {
 
 struct PlaceDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceDetailView(name: "")
+        NavigationView {
+            PlaceDetailView(name: "영월역")
+        }
     }
 }

@@ -40,8 +40,7 @@ struct DefaultImageInteractor: ImageInteractor {
 #if DEBUG
 struct StubImageInteractor: ImageInteractor {
     func load(image: Binding<Loadable<UIImage>>, url: String) {
-        return
+        image.wrappedValue = .failed(ImageError.notFound)
     }
-
 }
 #endif
