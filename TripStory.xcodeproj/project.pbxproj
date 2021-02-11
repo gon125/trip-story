@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		131FF1703CFAA8851E54DA8E /* Pods_TripStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACDE4E35D41917C3A54C836 /* Pods_TripStory.framework */; };
 		B300010725B8060F001C46F7 /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300010625B8060F001C46F7 /* WebRepository.swift */; };
 		B300010B25B80663001C46F7 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300010A25B80663001C46F7 /* APICall.swift */; };
 		B300010F25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300010E25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift */; };
 		B306CC5025AE8907007D99AD /* FindPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC4F25AE8907007D99AD /* FindPasswordView.swift */; };
 		B306CC5725AEB094007D99AD /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC5625AEB094007D99AD /* AuthenticationRepository.swift */; };
 		B306CC7225B03058007D99AD /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B306CC7125B03058007D99AD /* Helpers.swift */; };
-		B3247D3C25A9FE340002A7EA /* EnvironmentOverrides in Frameworks */ = {isa = PBXBuildFile; productRef = B3247D3B25A9FE340002A7EA /* EnvironmentOverrides */; };
+		B3247D3C25A9FE340002A7EA /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B3247D3B25A9FE340002A7EA /* SwiftPackageProductDependency */; };
 		B3247D4025A9FEA70002A7EA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3247D3F25A9FEA70002A7EA /* Launch Screen.storyboard */; };
 		B3247D4425AA00290002A7EA /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B3247D4325AA00290002A7EA /* logo.png */; };
 		B3247D4C25AA08750002A7EA /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3247D4B25AA08750002A7EA /* ErrorView.swift */; };
@@ -29,7 +28,7 @@
 		B3283FE825AC2DD100392CCA /* PushNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FE725AC2DD100392CCA /* PushNotificationsHandler.swift */; };
 		B3283FEC25AC388600392CCA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FEB25AC388600392CCA /* LoginView.swift */; };
 		B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3283FF525AC394E00392CCA /* SignUpView.swift */; };
-		B32EE28825B916AA00B5473D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B32EE28725B916AA00B5473D /* KeychainAccess */; };
+		B32EE28825B916AA00B5473D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B32EE28725B916AA00B5473D /* SwiftPackageProductDependency */; };
 		B32EE28C25B9464000B5473D /* LogoutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE28B25B9464000B5473D /* LogoutInteractor.swift */; };
 		B32EE29125B957EE00B5473D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE29025B957EE00B5473D /* HomeView.swift */; };
 		B32EE29525B957FF00B5473D /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32EE29425B957FF00B5473D /* ScheduleView.swift */; };
@@ -48,6 +47,7 @@
 		B365C22F25AC8B170095C52F /* NanumSquareLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22B25AC8B170095C52F /* NanumSquareLight.ttf */; };
 		B365C23025AC8B170095C52F /* NanumSquareRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */; };
 		B36A1B2925CA320D002C6B43 /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A1B2825CA320D002C6B43 /* PlaceDetailView.swift */; };
+		B36A1B2D25CA8C47002C6B43 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A1B2C25CA8C47002C6B43 /* VideoView.swift */; };
 		B376644025B4092200FE6A08 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376643F25B4092200FE6A08 /* LoginInteractor.swift */; };
 		B376644425B40B7B00FE6A08 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376644325B40B7B00FE6A08 /* SignupInteractor.swift */; };
 		B376644C25B4134B00FE6A08 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = B376644B25B4134B00FE6A08 /* States.swift */; };
@@ -69,7 +69,9 @@
 		B3CE283E25A9BE5700C5E0A9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE283D25A9BE5700C5E0A9 /* Store.swift */; };
 		B3CE284925A9CB8600C5E0A9 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284825A9CB8600C5E0A9 /* AppEnvironment.swift */; };
 		B3CE284D25A9D09700C5E0A9 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE284C25A9D09700C5E0A9 /* AuthenticationService.swift */; };
-		B3F8D1BC25AD4D320039D9D8 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = B3F8D1BB25AD4D320039D9D8 /* ViewInspector */; };
+		B3F8D1BC25AD4D320039D9D8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = B3F8D1BB25AD4D320039D9D8 /* SwiftPackageProductDependency */; };
+		CCC264C80796FEE938FC4EA9 /* Pods_TripStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACDE4E35D41917C3A54C836 /* Pods_TripStory.framework */; };
+		F3115E7225CCD36000F242B4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3115E7125CCD36000F242B4 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,7 @@
 		B365C22B25AC8B170095C52F /* NanumSquareLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareLight.ttf; sourceTree = "<group>"; };
 		B365C22C25AC8B170095C52F /* NanumSquareRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareRegular.ttf; sourceTree = "<group>"; };
 		B36A1B2825CA320D002C6B43 /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
+		B36A1B2C25CA8C47002C6B43 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		B376643F25B4092200FE6A08 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		B376644325B40B7B00FE6A08 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
 		B376644B25B4134B00FE6A08 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 		B3CE283D25A9BE5700C5E0A9 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		B3CE284825A9CB8600C5E0A9 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		B3CE284C25A9D09700C5E0A9 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		F3115E7125CCD36000F242B4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,9 +161,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32EE28825B916AA00B5473D /* KeychainAccess in Frameworks */,
-				B3247D3C25A9FE340002A7EA /* EnvironmentOverrides in Frameworks */,
-				131FF1703CFAA8851E54DA8E /* Pods_TripStory.framework in Frameworks */,
+				B32EE28825B916AA00B5473D /* BuildFile in Frameworks */,
+				B3247D3C25A9FE340002A7EA /* BuildFile in Frameworks */,
+				CCC264C80796FEE938FC4EA9 /* Pods_TripStory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F8D1BC25AD4D320039D9D8 /* ViewInspector in Frameworks */,
+				B3F8D1BC25AD4D320039D9D8 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +236,7 @@
 				B3BFB35025B18165007F0B9D /* LoadingButtonView.swift */,
 				B34E4DD025C625C000D58CA7 /* ImageView.swift */,
 				B36A1B2825CA320D002C6B43 /* PlaceDetailView.swift */,
+				B36A1B2C25CA8C47002C6B43 /* VideoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 			children = (
 				B37DAC3C25AD886B007855E6 /* Errors.swift */,
 				B376644B25B4134B00FE6A08 /* States.swift */,
+				F3115E7125CCD36000F242B4 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -538,8 +544,8 @@
 			);
 			name = TripStory;
 			packageProductDependencies = (
-				B3247D3B25A9FE340002A7EA /* EnvironmentOverrides */,
-				B32EE28725B916AA00B5473D /* KeychainAccess */,
+				B3247D3B25A9FE340002A7EA /* SwiftPackageProductDependency */,
+				B32EE28725B916AA00B5473D /* SwiftPackageProductDependency */,
 			);
 			productName = TripStory;
 			productReference = B3CE279C25A8AED300C5E0A9 /* TripStory.app */;
@@ -560,7 +566,7 @@
 			);
 			name = UnitTests;
 			packageProductDependencies = (
-				B3F8D1BB25AD4D320039D9D8 /* ViewInspector */,
+				B3F8D1BB25AD4D320039D9D8 /* SwiftPackageProductDependency */,
 			);
 			productName = UnitTests;
 			productReference = B3CE281825A9A89500C5E0A9 /* UnitTests.xctest */;
@@ -595,9 +601,9 @@
 			);
 			mainGroup = B3CE279325A8AED300C5E0A9;
 			packageReferences = (
-				B3CE283525A9AAF300C5E0A9 /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */,
-				B3F8D1BA25AD4D320039D9D8 /* XCRemoteSwiftPackageReference "ViewInspector" */,
-				B32EE28625B916AA00B5473D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				B3CE283525A9AAF300C5E0A9 /* RemoteSwiftPackageReference */,
+				B3F8D1BA25AD4D320039D9D8 /* RemoteSwiftPackageReference */,
+				B32EE28625B916AA00B5473D /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = B3CE279D25A8AED300C5E0A9 /* Products */;
 			projectDirPath = "";
@@ -729,6 +735,7 @@
 				B376644425B40B7B00FE6A08 /* SignupInteractor.swift in Sources */,
 				B3283FE425AC13F100392CCA /* DeepLinksHandler.swift in Sources */,
 				B306CC7225B03058007D99AD /* Helpers.swift in Sources */,
+				F3115E7225CCD36000F242B4 /* Models.swift in Sources */,
 				B300010F25B80DF0001C46F7 /* DefaultAuthenticationRepository.swift in Sources */,
 				B3BFB35125B18165007F0B9D /* LoadingButtonView.swift in Sources */,
 				B37DAC3725AD81A0007855E6 /* ButtonModifiers.swift in Sources */,
@@ -742,6 +749,7 @@
 				B37DAC3325AD792A007855E6 /* TextFieldModifiers.swift in Sources */,
 				B32EE29525B957FF00B5473D /* ScheduleView.swift in Sources */,
 				B37DAC3D25AD886B007855E6 /* Errors.swift in Sources */,
+				B36A1B2D25CA8C47002C6B43 /* VideoView.swift in Sources */,
 				B3CE27F925A946EC00C5E0A9 /* AppState.swift in Sources */,
 				B376644C25B4134B00FE6A08 /* States.swift in Sources */,
 				B3283FF625AC394E00392CCA /* SignUpView.swift in Sources */,
@@ -1022,7 +1030,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B32EE28625B916AA00B5473D /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+		B32EE28625B916AA00B5473D /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
 			requirement = {
@@ -1030,7 +1038,7 @@
 				minimumVersion = 4.2.1;
 			};
 		};
-		B3CE283525A9AAF300C5E0A9 /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */ = {
+		B3CE283525A9AAF300C5E0A9 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nalexn/EnvironmentOverrides";
 			requirement = {
@@ -1038,7 +1046,7 @@
 				minimumVersion = 0.0.2;
 			};
 		};
-		B3F8D1BA25AD4D320039D9D8 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+		B3F8D1BA25AD4D320039D9D8 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nalexn/ViewInspector";
 			requirement = {
@@ -1049,19 +1057,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B3247D3B25A9FE340002A7EA /* EnvironmentOverrides */ = {
+		B3247D3B25A9FE340002A7EA /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B3CE283525A9AAF300C5E0A9 /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */;
+			package = B3CE283525A9AAF300C5E0A9 /* RemoteSwiftPackageReference */;
 			productName = EnvironmentOverrides;
 		};
-		B32EE28725B916AA00B5473D /* KeychainAccess */ = {
+		B32EE28725B916AA00B5473D /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B32EE28625B916AA00B5473D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = B32EE28625B916AA00B5473D /* RemoteSwiftPackageReference */;
 			productName = KeychainAccess;
 		};
-		B3F8D1BB25AD4D320039D9D8 /* ViewInspector */ = {
+		B3F8D1BB25AD4D320039D9D8 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B3F8D1BA25AD4D320039D9D8 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			package = B3F8D1BA25AD4D320039D9D8 /* RemoteSwiftPackageReference */;
 			productName = ViewInspector;
 		};
 /* End XCSwiftPackageProductDependency section */

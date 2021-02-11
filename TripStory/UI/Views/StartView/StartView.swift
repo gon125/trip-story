@@ -16,10 +16,10 @@ struct StartView: View {
 
                 VStack {
                     Text("Trip Story")
-                        .font(.title)
+                        .font(.customTitle)
                         .multilineTextAlignment(.center)
                     Text("You deserve a good trip!")
-                        .font(.subtitle)
+                        .font(.customSubtitle)
                     Spacer()
                     NavigationLink(
                         destination:
@@ -44,7 +44,7 @@ struct StartView: View {
                         Image(systemName: "exclamationmark.circle.fill")
                         Text("Trip Story provides travel stories shared by members.")
                             .multilineTextAlignment(.center)
-                            .font(.subtitle)
+                            .font(.customSubtitle)
                     }
                     Spacer()
 
@@ -55,7 +55,7 @@ struct StartView: View {
         }
         // for navigation bar back button color
         .accentColor(.white)
-        .navigationViewStyle(StackNavigationViewStyle())
+        // .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

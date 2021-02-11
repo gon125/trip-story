@@ -26,7 +26,7 @@ struct HomeView: View {
                     }
                 }
             }
-            .onAppear { UINavigationBar.appearance().tintColor = .black
+            .onAppear {
                 injected.appState[\.routing.mainViewRouting] = .home
             }
             .navigationBarBackButtonHidden(true)

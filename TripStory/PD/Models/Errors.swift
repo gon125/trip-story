@@ -38,6 +38,18 @@ enum AuthError: CustomError {
     case externalError(String)
 }
 
+enum ImageError: CustomError {
+    case notFound
+}
+
+extension ImageError {
+    var description: String {
+        switch self {
+        case .notFound: return "Image not found"
+        }
+    }
+}
+
 extension AuthError {
     var description: String {
         switch self {

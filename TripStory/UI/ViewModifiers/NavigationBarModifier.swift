@@ -8,20 +8,37 @@
 import SwiftUI
 
 // MARK: - Navigation Bar Appearance
+
+// globally
 extension UINavigationController {
-    override open func viewDidLoad() {
+
+    static var navigationBarTitleColor: UIColor?
+
+    open override func viewDidLoad() {
         super.viewDidLoad()
+        navigationBar.standardAppearance.backButtonAppearance.normal.titleTextAttributes[.foregroundColor] = UIColor.clear
+        navigationBar.standardAppearance.configureWithTransparentBackground()
+        navigationBar.standardAppearance.titleTextAttributes[.font] = UIFont.navigationBarTitle
+        navigationBar.standardAppearance.titleTextAttributes[.foregroundColor] = UINavigationController.navigationBarTitleColor ?? .white
+    }
+}
 
-        let standardAppearance = UINavigationBarAppearance()
-        standardAppearance.titleTextAttributes = [
-            .font: UIFont.navigationBarTitle
-        ]
-        // remove back button text
-        standardAppearance.backButtonAppearance.normal.titleTextAttributes = [
-            .foregroundColor: UIColor.clear
-        ]
-        standardAppearance.configureWithTransparentBackground()
+// modifier
+struct NavigationBarModifier: ViewModifier {
 
-        navigationBar.standardAppearance = standardAppearance
+    var titleColor: UIColor?
+
+    init(titleColor: UIColor?) {
+        UINavigationController.navigationBarTitleColor = .black
+    }
+
+    func body(content: Content) -> some View {
+        content
+    }
+}
+
+extension View {
+    func navigationBarTitleColor(titleColor: UIColor? = nil) -> some View {
+        self.modifier(NavigationBarModifier(titleColor: titleColor))
     }
 }
