@@ -3,7 +3,7 @@ trip-story demo app implemented with SwiftUI + Combine
 
 2021-01 ~ 
 
-SwiftUI 의 UI Customizing의 한계가 아직은 있음을 느꼈습니다. UIKit 공부 한 후 돌아와서 적용시키겠습니다.
+SwiftUI 의 UI Customizing의 한계가 아직은 있음을 느꼈습니다. 저 스스로 모르는 부분이 아직 많은 것 같습니다. 조금 더 공부하고 오겠습니다.
 
 ## features
 - Clean Architecture (View, ViewModel, Interactor, Model, Repository)
