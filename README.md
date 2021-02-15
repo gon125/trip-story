@@ -1,6 +1,8 @@
 # trip-story
 trip-story demo app implemented with SwiftUI + Combine
+
 2021-01 ~ 
+
 SwiftUI 의 UI Customizing의 한계를 느끼고 UIKit 공부 한 후 돌아와서 적용시키겠습니다.
 
 ## features
